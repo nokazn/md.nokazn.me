@@ -36,7 +36,7 @@ nodenv 1.4.0+3.631d0b6
 ```bash
 if [ -e "$HOME/.nodenv" ]; then
     export NODENV_ROOT="$HOME/.nodenv"
-    export PATH="$HOME/.nodenv/bin:$PATH"
+    export PATH="$NODENV_ROOT/bin:$PATH"
     # nodenv コマンドが存在する場合
     if type "nodenv" >/dev/null 2>&1; then
         eval "$(nodenv init -)"
@@ -57,12 +57,14 @@ $ git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)"/plugins
 ## Node.js のインストール
 
 ```bash
+# インストール可能なパッケージの一覧を表示
+$ nodenv install -l
 $ nodenv install 12.16.3
 $ nodenv versions
 12.16.3
 
 # グローバルの Node.js を v12.16.3 に設定
-$ node global 12.16.3
+$ nodenv global 12.16.3
 $ node --version
 v12.16.3
 
@@ -79,6 +81,8 @@ $ nodenv rehash
 $ which yarn
 /home/nokazn/.nodenv/shims/yarn
 ```
+
+`npm i -g` でインストールしたパッケージはバージョンごとで独立しているため、Node.js のバージョンを切り替えた場合は再度インストールする必要がある。
 
 ## 参考
 
