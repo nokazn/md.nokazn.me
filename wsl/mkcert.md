@@ -59,7 +59,7 @@ The certificate is at "./localhost+1.pem" and the key at "./localhost+1-key.pem"
 
 ## Nuxt .js で証明書と認証キーを設定
 
-作成した証明書をドキュメントルートにコピーする。
+作成した証明書をプロジェクトルートにコピーする。
 
 ```bash
 $ cp $(mkcert -CAROOT)/localhost+1.pem ./localhost.pem 
