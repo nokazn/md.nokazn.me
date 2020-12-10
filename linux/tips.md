@@ -45,3 +45,17 @@ warning: foo
 
 
 
+## `sed` コマンドの `-e` オプション
+
+> `sed` では `-e` オプションを省略することができます。
+>
+> ただ、`-e` オプションを省略した場合は、`sed` の第一引数がコマンド、第二引数以降は入力ファイルと解釈されます。
+
+```bash
+$ sed -e "s/before/after/g" ./in.txt
+$ sed "s/before/after/g" ./in.txt
+```
+
+### 参考
+
+[sedの-eオプションは省略もできるが、引数の設定順に注意](https://it-ojisan.tokyo/sed-e-option/)
