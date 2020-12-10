@@ -63,7 +63,7 @@ $ goenv local 1.14.12
 
 ## Go のアンインストール
 
-goenv を削除するには以下のようにする。
+goenv で特定のバージョンを削除するには以下のようにする。
 
 ```bash
 $ goenv uninstall 1.6.2
