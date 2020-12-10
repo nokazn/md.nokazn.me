@@ -10,6 +10,8 @@
 $ echo $PATH | sed "s/:/\n/g"
 ```
 
+
+
 ## コマンドの存在チェック
 
 ```bash
@@ -24,3 +26,22 @@ type "command" > /dev/null 2>&1
 [typeコマンド - Bash入門](https://bash.open-code.club/Linux%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/T/type.html)  
 [OSに付属するシェルスクリプトを読んで技術を盗む (2/2)：スマートな紳士のためのシェルスクリプト（3）- ＠IT](https://www.atmarkit.co.jp/ait/articles/1201/27/news113_2.html)  
 [いい加減覚えよう。 `command > /dev/null 2>&1`の意味 - Qiita](https://qiita.com/ritukiii/items/b3d91e97b71ecd41d4ea)  
+
+
+
+## `sed` コマンドの `-r` オプション
+
+マッチした箇所のキャプチャは `-r` オプションをつけないと有効にならない。
+
+マッチした順番に 1, 2, 3, ... と番号が振られ、`\1`, `\2`, `\3`, ... とすると参照できる。
+
+```bash
+$ echo "foo" | sed -e "s/(^.*$)/warning: \1/g"
+sed: -e expression #1, char 22: invalid reference \1 on `s' command's RHS
+
+$ echo "foo" | sed -r -e "s/(^.*$)/warning: \1/g"
+warning: foo
+```
+
+
+
