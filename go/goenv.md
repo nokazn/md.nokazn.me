@@ -28,7 +28,7 @@ $ ~/.goenv/bin/goenv init
 $ exec $SHELL -l
 ```
 
-`~/.bashrc` に記述しておくとシェル起動時に実行される。`GOOROOT` と `GOPATH` もここで設定しておくと便利。
+`~/.bashrc` に記述しておくとシェル起動時に実行される。~~`GOOROOT`~~ と `GOPATH` もここで設定しておくと便利。goenv 2.0 系では `GOPATH`をよしなに設定してくれるので自分で設定する必要はない。
 
 ```bash
 if [ -e "$HOME/.goenv" ]; then
@@ -43,6 +43,8 @@ if [ -e "$HOME/.goenv" ]; then
 fi
 ```
 
+
+
 ## Go のインストール
 
 ```bash
@@ -50,6 +52,8 @@ fi
 $ goenv install -l
 # 最新のバージョンをインストール
 $ goenv install $(goenv install -l | tail -n 1)
+$ goenv versions
+* 1.15.5 (set by /home/nokazn/.goenv/version)
 
 # グローバルの Go を最新版に設定
 $ goenv global $(goenv install -l | tail -n 1)
@@ -61,6 +65,12 @@ $ goenv install 1.14.12
 $ goenv local 1.14.12
 ```
 
+vscode-go で [`Go: Locate Configured Go Tools`](https://github.com/golang/vscode-go/blob/master/docs/commands.md#go-locate-configured-go-tools) としたときに、うまく `GOROOT` を読み込んでくれない場合は Remote WSL の接続をやり直すとうまくいった。
+
+[golang/vscode-go: Go extension for VS Code # install go](https://github.com/golang/vscode-go#install-go)
+
+
+
 ## Go のアンインストール
 
 goenv で特定のバージョンを削除するには以下のようにする。
@@ -70,6 +80,8 @@ $ goenv uninstall 1.6.2
 ```
 
 `~/.goenv/versions` 配下にインストールした Go が格納されているおり、`goenv uninstall` は対応するバージョンのディレクトリを削除するのと同義である。
+
+
 
 ## goenv のアンインストール
 
