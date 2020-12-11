@@ -59,3 +59,15 @@ $ sed "s/before/after/g" ./in.txt
 ### 参考
 
 [sedの-eオプションは省略もできるが、引数の設定順に注意](https://it-ojisan.tokyo/sed-e-option/)
+
+
+
+## ディレクトリの容量を調べる
+
+```bash
+$ du ./DefinitelyTyped -sm
+1021    ./DefinitelyTyped/
+```
+
+- `-s` - サブディレクトリの情報を表示しない
+- `-m` - 1Mb 単位で表示する (`-block-size=1M` と同義)
