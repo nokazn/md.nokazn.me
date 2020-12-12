@@ -74,58 +74,82 @@ $ du ./DefinitelyTyped -sm
 
 
 
-## 特定のポート番号を使用しているプロセスを調べる
-
-### `ss` / `netstat`
-
-Ubuntu Desktop では `netstat` を含む net-tools が標準でインストールされなくなったり、CentOS7 では非推奨となったりで、現在は `ss` コマンドの利用が推奨されている。
-
-- `-a` - 全ソケットを表示
-- `-n` - サービス名に変換せず表示
-- `-t` - TCP 情報のみ表示
-- `-u` - UDP 情報のみ表示
-
-| name | description |
-| --- | --- |
-| Netid | Socketのタイプ<br/>  `u_str`：UNIX Domainソケット<br/>  `tcp`： TCPソケット<br/>   `udp`： UDPソケット |
-| State | 通信の状態 |
-| Recv-Q | 受信キューの数 |
-| Send-Q | 送信キューの数 |
-| Local Address:Port | サーバー側のIP又はソケットファイル、ポートを表示 |
-| Peer Address:Port | 通信している側のIP又はソケットファイル、ポートを表示 |
+## システム情報を出力
 
 ```bash
-$ ss -atn
-State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process   
-LISTEN   0         128       127.0.0.1:3000        0.0.0.0:*
+$ uname -a
+Linux DESKTOP-20RV1U6 4.19.128-microsoft-standard #1 SMP Tue Jun 23 12:58:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+
+
+## Ubuntu でディストリビューションの情報を出力
+
+### `lsb_release`
+
+`lsb_release` コマンドがない場合はインストールする必要がある。
+
+```bash
+sudo apt install lsb_release
 ```
 
 ```bash
-netstat -atn
-State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process   
-LISTEN   0         128       127.0.0.1:3000        0.0.0.0:*
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.1 LTS
+Release:        20.04
+Codename:       focal
+$ lsb_release -cs
+focal
 ```
 
-### `lsof -i`
-
-プロセスがアクセスしているポートを調べる。
-
-- `-i` -  select IPv[46] files
+### `/etc/lsb_release` を参照する
 
 ```bash
-$ lsof -i
-COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-node    4607 nokazn   18u  IPv6 447269      0t0  TCP *:35677 (LISTEN)
-node    4607 nokazn   20u  IPv6 447273      0t0  TCP 172.30.216.228:35677->DESKTOP-20RV1U6.mshome.net:60511 (ESTABLISHED)
-node    4837 nokazn   19u  IPv6 447274      0t0  TCP 172.30.216.228:35677->DESKTOP-20RV1U6.mshome.net:60512 (ESTABLISHED)
-
-# ポート番号を指定
-$ lsof -i:80
+$ cat /etc/lsb_release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.1 LTS"
 ```
 
-### 参考
 
-[Linuxでプロセスが何のポート使っているかを調べる - Qiita](https://qiita.com/sonoshou/items/cc2b740147ba1b8da1f3)
-[Ubuntu 17.04 その148 - netstatからssへ移行しよう・ソケットの情報を表示するコマンド - kledgeb](https://kledgeb.blogspot.com/2017/07/ubuntu-1704-148-netstatss.html)
-[Linuxのポート状況を確認する](https://www.linuxmaster.jp/linux_skill/2009/02/linux-4.html)
+
+## CentOS でディストリビューションのバージョン情報を出力
+
+### `lsb_release`
+
+`lsb_release` コマンドがない場合はインストールする必要がある。
+
+```bash
+sudo yum install redhat-lsb
+```
+
+```bash
+$ lsb_release -a
+LSB Version:    :core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID: CentOS
+Description:    CentOS Linux release 7.6.1810 (Core)
+Release:        7.6.1810
+Codename:       Core
+```
+
+### `/etc/redhat-release` を参照する
+
+```bash
+$ cat /etc/lsb_release
+CentOS Linux release 7.6.1810 (Core)
+```
+
+
+
+
+
+## ホストマシンのアーキテクチャを出力
+
+```bash
+$ arch
+x86_64
+```
 
