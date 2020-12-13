@@ -144,6 +144,35 @@ CentOS Linux release 7.6.1810 (Core)
 
 
 
+## `apt` でインストールしたパッケージの履歴を確認する
+
+```bash
+# apt-get install / apt install とした履歴
+$ cat /var/log/apt/history.log | grep install
+Commandline: apt install make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip -y
+Commandline: apt install libnss3-tools
+Commandline: apt-get install -y apt-transport-https
+Commandline: apt-get install -y heroku
+Commandline: apt install xsel
+Commandline: apt install -y vim-gtk
+
+# 依存関係のためインストールされたパッケージも含む
+$ sudo apt list --installed
+```
+
+
+
+## `apt` で upgrade できるパッケージを確認する
+
+```bash
+# upgrade できるパッケージ
+$ sudo apt list --upgradable
+# install したパッケージ
+$ sudo apt list --installed
+```
+
+
+
 
 
 ## ホストマシンのアーキテクチャを出力
