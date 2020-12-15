@@ -13,10 +13,12 @@ $ cd ~/.nodenv && src/configure && make -C src
 
 ```bash
 # Ubuntu Desktop or WSL
-$ echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'export NODENV_ROOT="${HOME}/.nodenv"' >> ~/.bashrc
+$ echo 'export PATH="${NODENV_ROOT}/bin:${PATH}"' >> ~/.bashrc
 
 # bash
-echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'export NODENV_ROOT="${HOME}/.nodenv"' >> ~/.bash_profile
+$ echo 'export PATH="${NODENV_ROOT}/bin:${PATH}"' >> ~/.bash_profile
 ```
 
 nodenv をセットアップする。
@@ -24,7 +26,7 @@ nodenv をセットアップする。
 ```bash
 $ ~/.nodenv/bin/nodenv init
 # シェルを再起動
-$ exec $SHELL -l
+$ exec $SHELL
 # nodenv が適切にインストールされているかチェック
 $ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 $ nodenv --version
@@ -34,9 +36,9 @@ nodenv 1.4.0+3.631d0b6
 `~/.bashrc` に記述しておくとシェル起動時に実行される。
 
 ```bash
-if [ -e "$HOME/.nodenv" ]; then
-    export NODENV_ROOT="$HOME/.nodenv"
-    export PATH="$NODENV_ROOT/bin:$PATH"
+if [ -e "${HOME}/.nodenv" ]; then
+    export NODENV_ROOT="${HOME}/.nodenv"
+    export PATH="${NODENV_ROOT}/bin:${PATH}"
     # nodenv コマンドが存在する場合
     if type "nodenv" >/dev/null 2>&1; then
         eval "$(nodenv init -)"

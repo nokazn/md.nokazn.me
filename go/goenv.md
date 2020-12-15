@@ -12,12 +12,12 @@ $ git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 ```bash
 # Ubuntu Desktop or WSL
-$ echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.bashrc
-$ echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.bashrc
+$ echo 'export GOENV_ROOT="${HOME}/.goenv"' >> ~/.bashrc
+$ echo 'export PATH="${GOENV_ROOT}/bin:${PATH}"' >> ~/.bashrc
 
 # bash
-$ echo 'export GOENV_ROOT="$HOME/.goenv"' >> ~/.bash_profile
-$ echo 'export PATH="$GOENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+$ echo 'export GOENV_ROOT="${HOME}/.goenv"' >> ~/.bash_profile
+$ echo 'export PATH="${GOENV_ROOT}/bin:${PATH}"' >> ~/.bash_profile
 ```
 
 goenv をセットアップする。
@@ -31,15 +31,15 @@ $ exec $SHELL -l
 `~/.bashrc` に記述しておくとシェル起動時に実行される。~~`GOOROOT`~~ と `GOPATH` もここで設定しておくと便利。goenv 2.0 系では `GOPATH`をよしなに設定してくれるので自分で設定する必要はない。
 
 ```bash
-if [ -e "$HOME/.goenv" ]; then
-    export GOENV_ROOT="$HOME/.goenv"
-    export PATH="$GOENV_ROOT/bin:$PATH"
+if [ -e "${HOME}/.goenv" ]; then
+    export GOENV_ROOT="${HOME}/.goenv"
+    export PATH="${GOENV_ROOT}/bin:${PATH}"
     # goenv コマンドが存在する場合
     if type "goenv" >/dev/null 2>&1; then
         eval "$(goenv init -)"
     fi
-    export PATH="$GOROOT/bin:$PATH"
-    export PATH="$PATH:$GOPATH/bin"
+    export PATH="${GOROOT}/bin:${PATH}"
+    export PATH="${PATH}:${GOPATH}/bin"
 fi
 ```
 
