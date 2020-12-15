@@ -173,9 +173,7 @@ $ sudo apt list --installed
 
 
 
-
-
-## ホストマシンのアーキテクチャを出力
+## ホストマシンのアーキテクチャの情報を出力する
 
 ```bash
 $ arch
@@ -184,4 +182,14 @@ x86_64
 
 
 
+## postgres ユーザーでログインシェルを実行する
+
+```bash
+# 以下は同じ意味
+$ sudo su -
+$ sudo su --login root
+
+# postgres ユーザーとしてログインシェルを実行
+$ sudo su - postgres
+```
 
