@@ -74,12 +74,20 @@ $ pyenv versions
 $ pyenv local 2.7.18
 ```
 
-pipenv もインストールしておく。
+pipenv もインストールしておく。システム依存になるのを防ぐため、`--user` オプションを付与する。
 
 ```bash
-$ pip install pipenv
+$ pip install --user pipenv
 $ pipenv --version
 pipenv, version 11.9.0
+```
+
+pipenv のパスを通す。
+
+```bash
+if [ -e "${HOME}/.local/bin/pipenv" ]; then
+    export PATH="${HOME}/.local/bin:${PATH}"
+fi
 ```
 
 pipenv で環境にインストールされていないバージョンが指定された場合は pyenv によって指定されたバージョンの Python がインストールされる。
