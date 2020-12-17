@@ -193,3 +193,11 @@ $ sudo su --login root
 $ sudo su - postgres
 ```
 
+
+
+## tar コマンドで別名のディレクトリで解凍したい
+
+```bash
+$ mkdir another && tar -xvf ./compressed -C uncompressed --strip-components 1
+```
+
