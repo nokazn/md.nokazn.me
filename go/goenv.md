@@ -95,6 +95,35 @@ $ rm -rf $(goenv root)
 
 `.bashrc` から goenv に関する部分を削除しておく。
 
+
+
+## WSL で vscode-go を使うときの注意点
+
+WSL で [vscode-go](https://github.com/golang/vscode-go) を使い、Remote WSL で接続する際には環境変数をうまく読み込ませる必要がある。
+VSCode Remote が WSL 内で起動する際にはシェルの起動スクリプトは実行されておらず、vscode-go が `GOROOT` 等の環境変数を読み込む段階では環境変数が設定されていないっぽい。
+
+`~/.vscode-server/server-env-setup` 内に VSCode Remote が起動する前に実行してほしいスクリプトを置いておくことができる。
+
+```
+# vscode-go で環境変数を認識させる
+if [ -d "${HOME}/.goenv" ]; then
+    export GOENV_ROOT="${HOME}/.goenv"
+    export PATH="${GOENV_ROOT}/bin:${PATH}"
+    # goenv コマンドが存在する場合
+    if type "goenv" >/dev/null 2>&1; then
+        eval "$(goenv init -)"
+        # GOROOT はよしなに設定してくれる
+        export GOPATH="${HOME}/go"
+        export PATH="${PATH}:${GOPATH}/bin"
+        # Go Modules を有効にする
+        export 'GO111MODULE=on'
+    fi
+fi
+```
+
+
+
 ## 参考
 
 [syndbg/goenv: Like pyenv and rbenv, but for Go.](https://github.com/syndbg/goenv)
+[Developing in the Windows Subsystem for Linux with Visual Studio Code](https://code.visualstudio.com/docs/remote/wsl#_advanced-environment-setup-script)
