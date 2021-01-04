@@ -50,7 +50,7 @@ fi
 
 ```bash
 $ mkdir -p "$(nodenv root)"/plugins
-# Node.js のインストールも行う
+# Node.js のインストールを行えるようにする
 $ git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 # `nodenv update` コマンドで nodenv とプラグインの更新を行う
 $ git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)"/plugins/nodenv-update
