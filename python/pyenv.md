@@ -104,7 +104,7 @@ Installing CPython 3.6.7 with pyenv (this may take a few minutes)…
 
 ## Python  のアンインストール
 
-pyenve で特定のバージョンを削除する場合は以下のようにする。
+pyenv で特定のバージョンを削除する場合は以下のようにする。
 
 ```bash
 $ pyenv uninstall 12.16.3
