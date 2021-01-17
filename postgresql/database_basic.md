@@ -100,6 +100,10 @@ SELECT * FROM diaries FULL JOIN comments on diaries.id = comments.diary_id ORDER
   - `LIMIT` / `OFFSET` 句内で `NULL` と評価された場合はそれぞれ `ALL` / `0` として扱う
   - `LIMIT 50 OFFSET 100` のように用いる
 
+## PostgreSQL ではキャメルケースは用いない
+
+テーブル名やカラム名はダブルクォーテーションでくくられない場合すべて小文字に正規化されるので、スネークケースで統一したほうがいい。
+
 ## 参考
 
 [SELECT](https://www.postgresql.jp/document/9.4/html/sql-select.html)
