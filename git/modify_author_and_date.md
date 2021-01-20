@@ -1,8 +1,8 @@
-# Git のコミット履歴に
+# Git のコミット履歴を変更する
 
 `~/.gitconfig` の設定漏れとかで、コミット履歴の author が適切に設定されず、GitHub 等でコミット履歴を見たときに author のアイコンが正しく表示されなかったりする場合の対処法。
 
-## commiter の変更
+## commiter  の変更
 
 ```bash
 $ git config --global user.name nokazn
@@ -17,7 +17,7 @@ $ git rebase -i HEAD~2 --committer-date-is-author-date
 # コミットのコメントと時刻はそのままにして author を変更する
 $ git commit -m "$(git log --format="%s" -n 1)" \
   --author="nokazn <your_email@mail.com>" \
-  --date="$(git log --format"%cd" -n 1)"\
+  --date="$(git log --format="%cd" -n 1)"\
   --amend; git rebase --continue;
 ```
 
