@@ -104,6 +104,36 @@ SELECT * FROM diaries FULL JOIN comments on diaries.id = comments.diary_id ORDER
 
 テーブル名やカラム名はダブルクォーテーションでくくられない場合すべて小文字に正規化されるので、スネークケースで統一したほうがいい。
 
+```sql
+select schedule."scheduleName", comments.comment, users.userName from comments left join schedule on schedule."scheduleId" = comments."scheduleId" join users on users."userId" = comments."userId";
+```
+
+
+
+## join は複数回適用させることができる
+
+```sql
+select
+  schedule."scheduleName",
+  comments.comment,
+  users.userName
+from comments
+left join schedule on schedule."scheduleId" = comments."scheduleId"
+join users on users."userId" = comments."userId";
+
+```
+
+
+
+## サブクエリの例
+
+```sql
+delete from candidate where candidate."scheduleId" in (select candidate."scheduleId" from candidate left join schedule on schedule."scheduleId" = candidate."scheduleId" where schedule."sch
+eduleId" is null);
+```
+
+
+
 ## 参考
 
 [SELECT](https://www.postgresql.jp/document/9.4/html/sql-select.html)
