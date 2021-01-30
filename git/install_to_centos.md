@@ -26,7 +26,7 @@ $ tar -zxf git-2.0.0.tar.gz
 $ cd git-2.0.0
 $ make configure
 $ ./configure --prefix=/usr
-# リンクの設定をしないとコンパイツが通らない
+# リンクの設定をしないとコンパイルが通らない
 $ ln -s /bin/db2x_docbook2texi /bin/docbook2x-texi
 $ sudo make all doc info
 $ sudo make install install-doc install-html install-info
