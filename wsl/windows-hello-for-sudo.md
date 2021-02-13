@@ -8,7 +8,7 @@
 $ wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz -O wsl-windows-sudo
 $ mkdir wsl-windows-sudo && tar -xvf wsl-windows-sudo.tar.gz -C wsl-windows-sudo --strip-components 1
 $ cd wsl-windows-hello
-./install.sh
+$ ./install.sh
 ```
 
 ## 設定
