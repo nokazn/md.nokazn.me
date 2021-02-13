@@ -1,4 +1,4 @@
-# Docker Desktop によってマウントされたファイルは Docker を停止しないと削除できない
+# Docker Desktop For Windows によってマウントされたファイルは Docker を停止しないと削除できない
 
 `docker-compose up` 等で生成した `node_modules` などがあるとき、Docker Desktop を起動中に `node_module` を削除しようとすると、
 
