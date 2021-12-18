@@ -201,3 +201,19 @@ $ sudo su - postgres
 $ mkdir another && tar -xvf ./compressed -C uncompressed --strip-components 1
 ```
 
+
+
+## ユーザー / グループ一覧
+
+```bash
+# ユーザー一覧
+$ cat /etc/passwd
+
+# グループ一覧
+$ cat /etc/group
+# 現在のユーザーが所属しているグループ一覧
+$ groups
+```
+
+
+
