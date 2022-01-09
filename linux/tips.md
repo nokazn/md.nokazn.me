@@ -62,6 +62,17 @@ $ sed "s/before/after/g" ./in.txt
 
 
 
+## `sed` コマンドの `-i` オプション
+
+ファイルの内容を上書きできる。
+
+```bash
+# ~/.ssh/config のインデントのスペースをタブに変更する
+$ sed -i -e "s/^\s+/\t/" ~/.ssh/config
+```
+
+
+
 ## ディレクトリの容量を調べる
 
 ```bash
@@ -214,6 +225,5 @@ $ cat /etc/group
 # 現在のユーザーが所属しているグループ一覧
 $ groups
 ```
-
 
 
