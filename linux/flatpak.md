@@ -26,4 +26,3 @@ $ flatpak install flathub com.spotify.Client
 ```bash
 $ pacman -Syu ca-certificates
 ```
-
