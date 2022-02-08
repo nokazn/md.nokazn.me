@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 trim_trailing_whitespace = false
 
 [*.json]
-trim_trailing_whitespace = false
+insert_final_newline = false
 
 [{Makefile,**.mk}]
 indent_style = tab

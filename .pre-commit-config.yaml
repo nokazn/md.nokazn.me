@@ -1,0 +1,23 @@
+default_stages:
+  - "commit"
+  - "push"
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.3.0
+  hooks:
+  -   id: check-symlinks
+  -   id: check-json
+  -   id: check-toml
+  -   id: check-yaml
+  -   id: end-of-file-fixer
+      exclude: "\\.txt$"
+  -   id: detect-private-key
+  -   id: mixed-line-ending
+  -   id: trailing-whitespace
+      args: [--markdown-linebreak-ext=md]
+
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.31.0
+  hooks:
+  - id: markdownlint
