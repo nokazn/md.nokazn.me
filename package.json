@@ -1,0 +1,13 @@
+{
+  "license": "MIT",
+  "author": {
+    "name": "nokazn",
+    "url": "https://github.com/nokazn"
+  },
+  "scripts": {
+    "lint:md": "markdownlint . --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.31.0"
+  }
+}
