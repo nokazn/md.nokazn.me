@@ -14,7 +14,7 @@ $ sudo yum install curl-devel \
 ドキュメントをdoc, html, info 形式等でインストールしたい場合は以下の依存ライブラリも必要になる。
 
 ```bash
-$ sudo yum install asciidoc xmlto docbook2X
+sudo yum install asciidoc xmlto docbook2X
 ```
 
 ## ソースをインストール
@@ -32,7 +32,7 @@ $ sudo make all doc info
 $ sudo make install install-doc install-html install-info
 ```
 
-
 ## 参考
+
 - [Git - Gitのインストール](https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 - [CentOS7にgitをソースからインストール \| server-memo.net](https://www.server-memo.net/memo/github/github-install.html)

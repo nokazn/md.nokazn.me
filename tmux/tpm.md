@@ -5,7 +5,7 @@
 ## tpm でプラグインを管理する
 
 ```bash
-$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ```diff
@@ -36,4 +36,3 @@ tmux-resurrect  tpm
 
 [tmux-plugins/tpm: Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 [tmux-plugins/tmux-resurrect: Persists tmux environment across system restarts.](https://github.com/tmux-plugins/tmux-resurrect#configuration)
-

@@ -1,6 +1,6 @@
-## 特定のポート番号を使用しているプロセスを調べる
+# 特定のポート番号を使用しているプロセスを調べる
 
-### `ss` / `netstat`
+## `ss` / `netstat`
 
 Ubuntu Desktop では `netstat` を含む net-tools が標準でインストールされなくなったり、CentOS7 では非推奨となったりで、現在は `ss` コマンドの利用が推奨されている。
 
@@ -20,13 +20,13 @@ Ubuntu Desktop では `netstat` を含む net-tools が標準でインストー�
 
 ```bash
 $ ss -atn
-State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process   
+State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process
 LISTEN   0         128       127.0.0.1:3000        0.0.0.0:*
 ```
 
 ```bash
 netstat -atn
-State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process   
+State    Recv-Q    Send-Q    Local Address:Port    Peer Address:Port    Process
 LISTEN   0         128       127.0.0.1:3000        0.0.0.0:*
 ```
 

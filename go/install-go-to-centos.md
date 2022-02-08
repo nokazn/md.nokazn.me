@@ -35,5 +35,5 @@ go version go1.14.2 linux/amd64
 [GOPATHについて - はじめてのGo言語](http://cuto.unirita.co.jp/gostudy/post/gopath/)
 
 ```bash
-$ echo "export GOPATH=/usr/local/go" >> ~/.bash_profile
+echo "export GOPATH=/usr/local/go" >> ~/.bash_profile
 ```

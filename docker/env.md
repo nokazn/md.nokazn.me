@@ -16,8 +16,6 @@ WORKDIR ${PROJECT_WORKDIR}
 `ENV` でコンテナのイメージ内に定義された環境変数は `Dockerfile` で参照できる。
 また、multi stage build をしても、`ENV` で環境変数が設定されたイメージを引き継いだイメージ内でも同様に参照できる。
 
-
-
 ## `.env` ファイル内で環境変数を指定した場合
 
 ```.yaml
@@ -60,10 +58,6 @@ $ echo $PORT
 4000
 ```
 
-
-
-
-
 ## ホストの環境変数を直接設定する場合
 
 ```yaml
@@ -84,7 +78,7 @@ services:
 ```
 
 ```sh
-$ PORT=5000 docker-compose --build client
+PORT=5000 docker-compose --build client
 ```
 
 前項と同様のファイルを用意し、コマンド実行時にシェル変数を設定する場合を考える。
@@ -130,8 +124,6 @@ $ docker exec -it client /bin/sh
 $ echo $PORT
 5000
 ```
-
-
 
 ## 参考
 

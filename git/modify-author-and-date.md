@@ -5,8 +5,8 @@
 ## commiter  の変更
 
 ```bash
-$ git config --global user.name nokazn
-$ git config --global user.email your_email@mail.com
+git config --global user.name nokazn
+git config --global user.email your_email@mail.com
 ```
 
 ## author の変更をして時刻を合わせる
@@ -20,8 +20,6 @@ $ git commit -m "$(git log --format="%s" -n 1)" \
   --date="$(git log --format="%cd" -n 1)"\
   --amend; git rebase --continue;
 ```
-
-
 
 ## 参考
 

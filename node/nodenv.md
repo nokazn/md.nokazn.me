@@ -1,12 +1,12 @@
-# nodenv で Node.js のバージョンを管理する 
+# nodenv で Node.js のバージョンを管理する
 
 システムに直接 Node.js をインストールするのではなく、nodenv 経由でインストールする。
 
 ## nodenv のインストール
 
 ```bash
-$ git clone https://github.com/nodenv/nodenv.git ~/.nodenv
-$ cd ~/.nodenv && src/configure && make -C src
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+cd ~/.nodenv && src/configure && make -C src
 ```
 
 パスを通す。
@@ -86,14 +86,12 @@ $ which yarn
 
 `npm i -g` でインストールしたパッケージはバージョンごとで独立しているため、Node.js のバージョンを切り替えた場合は再度インストールする必要がある。
 
-
-
 ## Node.js  のアンインストール
 
 nodenve で特定のバージョンを削除する場合は以下のようにする。
 
 ```bash
-$ nodenv uninstall 12.16.3
+nodenv uninstall 12.16.3
 ```
 
 `~/.nodenv/versions` 配下にインストールした Node.js が格納されているおり、`nodenv uninstall` は対応するバージョンのディレクトリを削除するのと同義である。

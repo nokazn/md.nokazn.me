@@ -5,7 +5,7 @@
 ## goenv のインストール
 
 ```bash
-$ git clone https://github.com/syndbg/goenv.git ~/.goenv
+git clone https://github.com/syndbg/goenv.git ~/.goenv
 ```
 
 パスを通す
@@ -43,8 +43,6 @@ if [ -e "${HOME}/.goenv" ]; then
 fi
 ```
 
-
-
 ## Go のインストール
 
 ```bash
@@ -69,19 +67,15 @@ vscode-go で [`Go: Locate Configured Go Tools`](https://github.com/golang/vscod
 
 [golang/vscode-go: Go extension for VS Code # install go](https://github.com/golang/vscode-go#install-go)
 
-
-
 ## Go のアンインストール
 
 goenv で特定のバージョンを削除するには以下のようにする。
 
 ```bash
-$ goenv uninstall 1.6.2
+goenv uninstall 1.6.2
 ```
 
 `~/.goenv/versions` 配下にインストールした Go が格納されているおり、`goenv uninstall` は対応するバージョンのディレクトリを削除するのと同義である。
-
-
 
 ## goenv のアンインストール
 
@@ -95,8 +89,6 @@ $ rm -rf $(goenv root)
 
 `.bashrc` から goenv に関する部分を削除しておく。
 
-
-
 ## WSL で vscode-go を使うときの注意点
 
 WSL で [vscode-go](https://github.com/golang/vscode-go) を使い、Remote WSL で接続する際には環境変数をうまく読み込ませる必要がある。
@@ -104,7 +96,7 @@ VSCode Remote が WSL 内で起動する際にはシェルの起動スクリプ�
 
 `~/.vscode-server/server-env-setup` 内に VSCode Remote が起動する前に実行してほしいスクリプトを置いておくことができる。
 
-```
+```bash
 # vscode-go で環境変数を認識させる
 if [ -d "${HOME}/.goenv" ]; then
     export GOENV_ROOT="${HOME}/.goenv"
@@ -120,8 +112,6 @@ if [ -d "${HOME}/.goenv" ]; then
     fi
 fi
 ```
-
-
 
 ## 参考
 

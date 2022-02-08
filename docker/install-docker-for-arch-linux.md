@@ -3,7 +3,7 @@
 ## インストール
 
 ```bash
-$ sudo pacman -S docker
+sudo pacman -S docker
 ```
 
 ## デーモンを実行

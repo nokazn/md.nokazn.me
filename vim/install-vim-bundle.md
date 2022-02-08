@@ -5,7 +5,7 @@ Vundle でプラグイン管理していく。
 ## インストール
 
 ```bash
-$ git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 `.vimrc` に以下を追記する。

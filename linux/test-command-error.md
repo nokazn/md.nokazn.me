@@ -1,4 +1,4 @@
-#  ターミナル起動時に `-bash: [: missing ]`  と表示される
+# ターミナル起動時に `-bash: [: missing ]`  と表示される
 
 `bash --login -x` (`bash -lx`) とすると bash 起動時に実行されるスクリプトを出力してくれる。
 
@@ -16,4 +16,3 @@ bash: [: missing `]'
 - if [ -f "$HOME/.bash_profile"]; then
 + if [ -f "$HOME/.bash_profile" ]; then
 ```
-

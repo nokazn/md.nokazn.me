@@ -16,7 +16,7 @@ EOF
 
 Arch Linux では `otf-ipaexfont` が公式からインストールできる。Firefox を開くにはこのフォントをインストールしないと日本語がうまく表示されなかった。
 
-```
+```bash
 $ sudo pacman -S otf-ipaexfont
 $ fc-list : file | grep ipaexg
 /usr/share/fonts/OTF/ipaexg.ttf: IPAexGothic,IPAexゴシック:style=Regular
@@ -29,7 +29,7 @@ Fcitx  (インプットメソッドフレームワーク) と Mozc (IME) で入�
 Arch Linux では `fcitx-mozc` を入れればよい。
 
 ```bash
-$ sudo pacman -S fcitx-mozc
+sudo pacman -S fcitx-mozc
 ```
 
 `~/.bashrc` や `~/.zshrc` 内に以下のように環境変数を設定し、fcitx を起動する文を追加する。
@@ -56,7 +56,7 @@ fcitx-autostart &> /dev/null
 ファイルを変更後、`locale-gen` コマンドを実行する。
 
 ```bash
-$ sudo locale-gen
+sudo locale-gen
 ```
 
 その後、`~/.bashrc` や `~/.zshrc` に `LOCALE` という環境変数を設定する文を追加する。
@@ -69,4 +69,3 @@ $ sudo locale-gen
 
 - [Win11のWSL2 (WSLg)を日本語化 & Mozcで日本語入力 | AsTechLog](https://astherier.com/blog/2021/07/windows11-wsl2-wslg-japanese/)
 - [Arch Linux （Xfce4導入済み）に日本語環境を構築する - Qiita](https://qiita.com/HayatoAoi/items/7ef87c37ecb41f8ca14e)
-

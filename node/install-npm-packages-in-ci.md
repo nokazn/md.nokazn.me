@@ -7,13 +7,13 @@
 ## `npm`
 
 ```bash
-$ npm ci
+npm ci
 ```
 
 ## `yarn`
 
 ```bash
-$ yarn install --frozen-lockfile
+yarn install --frozen-lockfile
 ```
 
 ### GitHub Actions でパッケージのインストールを行う例
@@ -39,7 +39,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        
+
 
 ```
 

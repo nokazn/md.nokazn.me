@@ -2,15 +2,11 @@
 
 よく使うコマンドとか諸々。
 
-
-
 ## パスを見やすく表示する
 
 ```bash
-$ echo $PATH | sed "s/:/\n/g"
+echo $PATH | sed "s/:/\n/g"
 ```
-
-
 
 ## コマンドの存在チェック
 
@@ -27,8 +23,6 @@ type "command" > /dev/null 2>&1
 [OSに付属するシェルスクリプトを読んで技術を盗む (2/2)：スマートな紳士のためのシェルスクリプト（3）- ＠IT](https://www.atmarkit.co.jp/ait/articles/1201/27/news113_2.html)  
 [いい加減覚えよう。 `command > /dev/null 2>&1`の意味 - Qiita](https://qiita.com/ritukiii/items/b3d91e97b71ecd41d4ea)  
 
-
-
 ## `sed` コマンドの `-r` オプション
 
 マッチした箇所のキャプチャは `-r` オプションをつけないと有効にならない。
@@ -43,8 +37,6 @@ $ echo "foo" | sed -r -e "s/(^.*$)/warning: \1/g"
 warning: foo
 ```
 
-
-
 ## `sed` コマンドの `-e` オプション
 
 > `sed` では `-e` オプションを省略することができます。
@@ -52,15 +44,13 @@ warning: foo
 > ただ、`-e` オプションを省略した場合は、`sed` の第一引数がコマンド、第二引数以降は入力ファイルと解釈されます。
 
 ```bash
-$ sed -e "s/before/after/g" ./in.txt
-$ sed "s/before/after/g" ./in.txt
+sed -e "s/before/after/g" ./in.txt
+sed "s/before/after/g" ./in.txt
 ```
 
 ### 参考
 
 [sedの-eオプションは省略もできるが、引数の設定順に注意](https://it-ojisan.tokyo/sed-e-option/)
-
-
 
 ## `sed` コマンドの `-i` オプション
 
@@ -70,8 +60,6 @@ $ sed "s/before/after/g" ./in.txt
 # ~/.ssh/config のインデントのスペースをタブに変更する
 $ sed -i -e "s/^\s+/\t/" ~/.ssh/config
 ```
-
-
 
 ## ディレクトリの容量を調べる
 
@@ -83,16 +71,12 @@ $ du ./DefinitelyTyped -sm
 - `-s` - サブディレクトリの情報を表示しない
 - `-m` - 1Mb 単位で表示する (`-block-size=1M` と同義)
 
-
-
 ## システム情報を出力
 
 ```bash
 $ uname -a
 Linux DESKTOP-20RV1U6 4.19.128-microsoft-standard #1 SMP Tue Jun 23 12:58:10 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
 ```
-
-
 
 ## Ubuntu でディストリビューションの情報を出力
 
@@ -125,8 +109,6 @@ DISTRIB_CODENAME=focal
 DISTRIB_DESCRIPTION="Ubuntu 20.04.1 LTS"
 ```
 
-
-
 ## CentOS でディストリビューションのバージョン情報を出力
 
 ### `lsb_release`
@@ -153,8 +135,6 @@ $ cat /etc/lsb_release
 CentOS Linux release 7.6.1810 (Core)
 ```
 
-
-
 ## `apt` でインストールしたパッケージの履歴を確認する
 
 ```bash
@@ -171,8 +151,6 @@ Commandline: apt install -y vim-gtk
 $ sudo apt list --installed
 ```
 
-
-
 ## `apt` で upgrade できるパッケージを確認する
 
 ```bash
@@ -182,16 +160,12 @@ $ sudo apt list --upgradable
 $ sudo apt list --installed
 ```
 
-
-
 ## ホストマシンのアーキテクチャの情報を出力する
 
 ```bash
 $ arch
 x86_64
 ```
-
-
 
 ## postgres ユーザーでログインシェルを実行する
 
@@ -204,15 +178,11 @@ $ sudo su --login root
 $ sudo su - postgres
 ```
 
-
-
 ## tar コマンドで別名のディレクトリで解凍したい
 
 ```bash
-$ mkdir another && tar -xvf ./compressed -C uncompressed --strip-components 1
+mkdir another && tar -xvf ./compressed -C uncompressed --strip-components 1
 ```
-
-
 
 ## ユーザー / グループ一覧
 
@@ -225,5 +195,3 @@ $ cat /etc/group
 # 現在のユーザーが所属しているグループ一覧
 $ groups
 ```
-
-

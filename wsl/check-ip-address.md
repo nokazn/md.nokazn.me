@@ -1,7 +1,7 @@
 # WSL に割り当てられる IP アドレスを確認する
 
 ```bash
-$ cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
+cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 ```
 
 ## 参考

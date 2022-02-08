@@ -11,7 +11,7 @@ $ sudo apt install libcurl4-gnutls-dev \
 ドキュメントをdoc, html, info 形式等でインストールしたい場合は以下の依存ライブラリも必要になる。
 
 ```bash
-$ sudo apt install asciidoc xmlto docbook2x
+sudo apt install asciidoc xmlto docbook2x
 ```
 
 ## ソースをインストール

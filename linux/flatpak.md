@@ -8,13 +8,13 @@
 ## インストール
 
 ```bash
-$ pamac install flatpak libpamac-flatpak-plugin
+pamac install flatpak libpamac-flatpak-plugin
 ```
 
 [flathub](https://flathub.org/home) にパッケージがあるので探して下記のようにインストールする。
 
 ```bash
-$ flatpak install flathub com.spotify.Client
+flatpak install flathub com.spotify.Client
 ```
 
 ## トラブルシューティング
@@ -24,5 +24,5 @@ $ flatpak install flathub com.spotify.Client
 `Unable to load summary from remote flathub: Unacceptable TLS certificate` というメッセージが出る場合、 `ca-certificates` をインストールすれば直る。
 
 ```bash
-$ pacman -Syu ca-certificates
+pacman -Syu ca-certificates
 ```

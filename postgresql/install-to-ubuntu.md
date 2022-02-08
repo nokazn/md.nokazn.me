@@ -15,20 +15,16 @@ $ sudo apt update
 $ sudo apt install -y postgresql-12
 ```
 
-
-
 ## データベースクラスタを作成
 
 PostgreSQL が管理するデータベースの格納領域をデータベースクラスタという。
 通常は `postgres` ユーザーで以下のコマンドを叩くとデータ領域が作成される。
 
 ```bash
-$ initdb -W -D  /var/lib/postgresql/12/data --locale=C --encoding=UTF8
+initdb -W -D  /var/lib/postgresql/12/data --locale=C --encoding=UTF8
 ```
 
 Ubuntu の PostgreSQL のパッケージではインストールした際に `/var/lib/postgresql/<version>/main/`にデータ領域が作られる。
-
-
 
 ## OS 内の postgres ユーザーのパスワードを設定
 
@@ -45,19 +41,17 @@ PostgreSQL をインストールした直後の `postgres` ユーザーはパス
 ```bash
 # root か sudoers なユーザーで実行
 $ sudo passwd postgres
-New password: 
+New password:
 Retype new password:
 passwd: password updated successfully
 ```
-
-
 
 ## 起動
 
 `pg_ctl` で PostgreSQL のサービスを起動させる際、通常は `postgres` ユーザーで以下のコマンドを叩く。
 
 ```bash
-$ pg_ctl start -D /var/lib/postgresql/12/main
+pg_ctl start -D /var/lib/postgresql/12/main
 ```
 
 `-D` オプションでデータ領域に指定されているディレクトリを渡す。
@@ -72,8 +66,6 @@ $ service postgresql status
 12/main (port 5432): online
 ```
 
-
-
 ## PostgreSQL 内のユーザーのパスワードを設定
 
 PostgreSQL 自体が管理する `postgres` ユーザーのパスワードも設定しておく。
@@ -87,8 +79,6 @@ postgres=$ ALTER ROLE postgres WITH PASSWORD 'postgres';
 ALTER ROLE
 postgres=$ \q
 ```
-
-
 
 ## 参考
 

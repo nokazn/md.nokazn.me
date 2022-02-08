@@ -5,7 +5,7 @@
 
 設定で TCP/IP での接続が許可されていないと
 
-```
+```txt
 connect ECONNREFUSED 127.0.0.1:5432
 ```
 

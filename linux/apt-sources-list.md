@@ -9,8 +9,8 @@
 
 ## `sources.list` のフォーマット
 
-```
- deb http://apt.postgresql.org/pub/repos/apt focal-pgdg main
+```txt
+deb http://apt.postgresql.org/pub/repos/apt focal-pgdg main
 ```
 
 | name | description |

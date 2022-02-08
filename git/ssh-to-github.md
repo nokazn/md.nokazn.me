@@ -56,10 +56,10 @@ $ ssh -T git@github.com
 The authenticity of host 'github.com (192.30.255.112)' can't be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 RSA key fingerprint is MD5:16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to continue connecting (yes/no)? 
+Are you sure you want to continue connecting (yes/no)?
 yes
 Warning: Permanently added 'github.com,192.30.255.112' (RSA) to the list of known hosts.
-Enter passphrase for key '/home/nokazn/.ssh/id_rsa': 
+Enter passphrase for key '/home/nokazn/.ssh/id_rsa':
 Hi nokazn! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 

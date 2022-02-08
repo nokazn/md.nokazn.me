@@ -1,4 +1,4 @@
-## 型を拡張するとき
+# 型を拡張するとき
 
 ## npm に `@types/foo` が存在しないとき
 
@@ -55,6 +55,3 @@ declare global {
 [typeRootsの誤解 -- TypeScriptで、npmからインストールしたパッケージに型定義ファイル (*.d.ts) が存在しない場合の正しい対処方法 - Qiita](https://qiita.com/tetradice/items/b89a5dd41fcebf96379e)
 [typeRoots is not working? · Issue #12222 · microsoft/TypeScript](https://github.com/Microsoft/TypeScript/issues/12222#issuecomment-260417733)
 [Ambient declaration with an imported type in TypeScript - Stack Overflow](https://stackoverflow.com/questions/45099605/ambient-declaration-with-an-imported-type-in-typescript)
-
-
-

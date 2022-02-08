@@ -5,10 +5,10 @@
 [Release latest version · nullpo-head/WSL-Hello-sudo](https://github.com/nullpo-head/WSL-Hello-sudo/releases/latest) からダウンロードできる。
 
 ```bash
-$ wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz -O wsl-windows-sudo
-$ mkdir wsl-windows-sudo && tar -xvf wsl-windows-sudo.tar.gz -C wsl-windows-sudo --strip-components 1
-$ cd wsl-windows-hello
-$ ./install.sh
+wget http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz -O wsl-windows-sudo
+mkdir wsl-windows-sudo && tar -xvf wsl-windows-sudo.tar.gz -C wsl-windows-sudo --strip-components 1
+cd wsl-windows-hello
+./install.sh
 ```
 
 ## 設定
@@ -22,8 +22,6 @@ session    required   pam_env.so readenv=1 envfile=/etc/default/locale user_read
 @include common-account
 @include common-session-noninteractive
 ```
-
-
 
 ## 参考
 

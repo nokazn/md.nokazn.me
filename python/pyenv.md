@@ -1,12 +1,12 @@
-# pyenv で Python のバージョンを管理する 
+# pyenv で Python のバージョンを管理する
 
 システムに直接 Python をインストールするのではなく、pyenv 経由でインストールする。
 
 ## pyenv のインストール
 
 ```bash
-$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-$ cd ~/.pyenv && src/configure && make -C src
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+cd ~/.pyenv && src/configure && make -C src
 ```
 
 パスを通す。
@@ -47,11 +47,9 @@ fi
 システムの依存ファイルが原因でコンパイルが失敗する場合があるので、各種ビルドツールをインストールしておく。
 
 ```bash
-$ sudo apt update
-$ sudo apt install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+sudo apt update
+sudo apt install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 ```
-
-
 
 ## Python のインストール
 
@@ -100,19 +98,15 @@ Installing CPython 3.6.7 with pyenv (this may take a few minutes)…
 ⠦ Installing python...
 ```
 
-
-
 ## Python  のアンインストール
 
 pyenv で特定のバージョンを削除する場合は以下のようにする。
 
 ```bash
-$ pyenv uninstall 12.16.3
+pyenv uninstall 12.16.3
 ```
 
 `~/.pyenv/versions` 配下にインストールした Python が格納されているおり、`pyenv uninstall` は対応するバージョンのディレクトリを削除するのと同義である。
-
-
 
 ## pyenv のアンインストール
 

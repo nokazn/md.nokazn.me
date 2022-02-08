@@ -6,17 +6,17 @@
 
 以下のファイルを作成しておく。
 
-```
+```tf
 # provider.tf
 provider "aws" {
   region = "ap-northeast-1"
 }
 
 terraform {
-	required_providers {
-		aws = {
-	    version = "~> 3.70.0"
-		}
+ required_providers {
+  aws = {
+     version = "~> 3.70.0"
+  }
   }
 }
 ```
@@ -31,6 +31,6 @@ $ terraformer import aws -r lambda,sqs,cloudwatch, --regions=ap-northeast-1 --pa
 
 ## 参考
 
-- https://beyondjapan.com/blog/2020/05/terraformer-import-existing-infrastructure/
-- https://engineer.blog.lancers.jp/sre/versionup-terraform/
-    - provider が `aws` (deprecated) になっていたので、`hashicopr/aws`
+- <https://beyondjapan.com/blog/2020/05/terraformer-import-existing-infrastructure/>
+- <https://engineer.blog.lancers.jp/sre/versionup-terraform/>
+  - provider が `aws` (deprecated) になっていたので、`hashicopr/aws` に書き換える必要がある

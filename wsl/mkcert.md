@@ -30,9 +30,9 @@ $ sudo ln -s /usr/local/src/mkcert/mkcert /usr/local/bin/mkcert
 WSL 上でルート証明書をインストールし、Windows で使用可能なファイルとして出力する。
 
 ```bash
-$ mkcert -install
-$ cd $(mkcert -CAROOT)
-$ openssl pkcs12 -export -inkey ./rootCA-key.pem -in ./rootCA.pem -out rootCA.pfx
+mkcert -install
+cd $(mkcert -CAROOT)
+openssl pkcs12 -export -inkey ./rootCA-key.pem -in ./rootCA.pem -out rootCA.pfx
 ```
 
 ## ルート証明書のインストール
@@ -62,8 +62,8 @@ The certificate is at "./localhost+1.pem" and the key at "./localhost+1-key.pem"
 作成した証明書をプロジェクトルートにコピーする。
 
 ```bash
-$ cp $(mkcert -CAROOT)/localhost+1.pem ./localhost.pem 
-$ cp $(mkcert -CAROOT)/localhost+1-key.pem ./localhost-key.pem
+cp $(mkcert -CAROOT)/localhost+1.pem ./localhost.pem
+cp $(mkcert -CAROOT)/localhost+1-key.pem ./localhost-key.pem
 ```
 
 `nuxt.config.ts` の `server.https` に `key` と `cert`  を追加する。

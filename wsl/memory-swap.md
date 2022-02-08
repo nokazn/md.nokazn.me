@@ -11,7 +11,7 @@ Swap:          6144           0        6144
 
 ユーザーフォルダ配下に `.wslconfig` を追加することでメモリサイズとスワップ領域の割り当てを変更できる。
 
-```
+```txt
 [wsl2]
 memory=12GB
 swap=6GB
@@ -20,7 +20,7 @@ swap=6GB
 WSL を再起動させると設定の変更が反映されている。
 
 ```bash
-$ wsl --shutdown
+wsl --shutdown
 ```
 
 ```bash

@@ -20,8 +20,6 @@ $ ps -ef | grep node_modules
 
 Docker Desktop を停止させると普通に削除できる。
 
-
-
 ## 参考
 
 [files - How to get over "device or resource busy"? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/11238/how-to-get-over-device-or-resource-busy)

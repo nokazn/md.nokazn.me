@@ -8,15 +8,13 @@
 
 - Windows 10 バージョン 2004・ビルド19041.928
 - WSL2
-    - Ubuntu 20.04.2 LTS on Windows 10 x86_64 
-    - カーネルバージョン 5.4.72-microsoft-standard-WSL2 
+  - Ubuntu 20.04.2 LTS on Windows 10 x86_64
+  - カーネルバージョン 5.4.72-microsoft-standard-WSL2
 - Docker Desktop for Windows 3.3.3 (ビルド 64133)
-    - Docker Engine 20.10.6
+  - Docker Engine 20.10.6
 
 基本的に開発で使用するものは WSL2 の中で完結させる。
 Docker Desktop は[公式サイト](https://hub.docker.com/editions/community/docker-ce-desktop-windows)から Windows 側でインストールし、WSL2 integration を有効にすることで、WSL2 内からも `docker` コマンドが使えるようになる。
-
-
 
 ## 問題
 
@@ -24,7 +22,7 @@ nginx のコンテナから WSL2 内で動いているサーバーに `host.dock
 
 Docker Desktop は `host.docker.internal` というドメインからホストOSへの解決ができるよう、起動時に `C:\Windows\System32\drivers\etc\hosts` 内に以下のようにホストOS (Windows) の IP アドレスを追加してくれる。
 
-```
+```txt
 192.168.xxx.xxx host.docker.internal
 192.168.xxx.xxx gateway.docker.internal
 ```
@@ -41,11 +39,11 @@ nginx コンテナは `コンテナ → ホスト (Windows)` とアクセスし�
 
 デフォルトでは Powershell スクリプトの実行が制限されているため、実行ポリシーを変更する必要がある。Powershell を管理者権限で開き、以下を実行する。
 
-````
+```txt
 PS $ Set-ExecutionPolicy RemoteSigned
 PS $ Get-ExecutionPolicy
 RemoteSigned
-````
+```
 
 以下のスクリプトを管理者権限で開いた Powershell から実行する。ポート番号は適宜動かすアプリケーションによって変更させる。
 
@@ -91,13 +89,11 @@ WSL2 に割り当てられる IP アドレスは起動時ごとに変動する�
 
 のようなスクリプトを[WSL2 のスタートアップスクリプトを実行するハック](https://qiita.com/amenoyoya/items/41a2334cbc1facb87864) を使って実行できるか試してみたがうまくいかなかったため、Windows 内のタスクスケジューラでシステム起動時にスクリプトを実行させる。
 
-```
+```powershell
 PS $ wsl --shutdown
 ```
 
 のようにして WSL2 を再起動させると、割り当てられる IP アドレスも変動してしまうため、手動でスクリプトを実行する必要がある。
-
-
 
 ## おわりに
 
@@ -108,5 +104,4 @@ PS $ wsl --shutdown
 ## 参考
 
 - [Windows WSL2に外部から直接アクセスするための設定](https://rcmdnk.com/blog/2021/03/01/computer-windows-network/)
-
 - [[WSL 2] NIC Bridge mode 🖧 (Has TCP Workaround🔨) · Issue #4150 · microsoft/WSL](https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723)

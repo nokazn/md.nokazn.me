@@ -10,7 +10,7 @@ Linux では GUI の描画はほとんどの場合 X-Server (S Window System) �
 chocolatey を使う場合は以下のようにする。
 
 ```powershell
-$ choco install vcxsrv
+choco install vcxsrv
 ```
 
 インストールが完了したら XLaunch を実行し、デフォルトで選択されている項目のまま設定する。
@@ -45,8 +45,6 @@ $ xsel --version
 xsel version 1.2.0 by Conrad Parker <conrad@vergenet.net>
 ```
 
-
-
 ## tmux を vim のキーバインドで使う
 
 `~/.tmux.conf` に以下を追加する。
@@ -65,8 +63,6 @@ bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -ip && xs
 # マウスカーソルでドラッグして選択を終了
 bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xsel -ip && xsel -op | xsel -ib"
 ```
-
-
 
 ## vim でクリップボードを有効にする
 
@@ -100,10 +96,8 @@ $ vim --version | grep clipboard
 `~/.vimrc` に以下の内容を追加すると、vim でコピーした文字列を外部に張り付けることができるようになっている。
 
 ```bash
-$ echo "set clipboard=unnamedplus" > ~/dotfiles/.vimrc
+echo "set clipboard=unnamedplus" > ~/dotfiles/.vimrc
 ```
-
-
 
 ## 参考
 
@@ -112,4 +106,4 @@ $ echo "set clipboard=unnamedplus" > ~/dotfiles/.vimrc
 [WSLコンソールのコピペ方法まとめ（Vim,Tmux) - Qiita](https://qiita.com/kenji0x02/items/f77008985818583bf32b)
 [WSL2におけるVcXsrvの設定 - Qiita](https://qiita.com/ryoi084/items/0dff11134592d0bb895c)
 [vim-gnomeとvim-gtkの違い | うなすけとあれこれ](https://blog.unasuke.com/2014/difference-of-vim-gnome-and-vim-gtk/)
-https://sy-base.com/myrobotics/vim/vim_use_clipboard/
+<https://sy-base.com/myrobotics/vim/vim_use_clipboard/>

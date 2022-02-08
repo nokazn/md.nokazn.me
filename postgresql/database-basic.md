@@ -11,8 +11,6 @@
   - `DELETE`
 - DCL (Data Control Language)
 
-
-
 ## 結合
 
 内部結合と外部結合があり、外部結合にも更に左側外部結合、右側外部結合、完全外部結合の3種類が存在する。
@@ -56,8 +54,6 @@ SELECT * FROM diaries FULL JOIN comments on diaries.id = comments.diary_id ORDER
 複数のテーブルのデータの直積 (すべての組み合わせ) を結果として返す。
 `WHERE` 句を用いることで上記の結合はすべて交差結合で書き直すことができる。`INNER JOIN <table_name> ON (TRUE)` と等価。
 
-
-
 ## SELECT 文内での句の優先順位
 
 - `FROM`
@@ -86,7 +82,7 @@ SELECT * FROM diaries FULL JOIN comments on diaries.id = comments.diary_id ORDER
 - `WINDOW`
 - `SELECT`
   - 出力行を指定し、すべての行を出力させたい場合は `*` で指定する
-- `DISTINCT ON `
+- `DISTINCT ON`
   - 重複する行を結果から除く
   - `DISTINCT ON (<column_name>)` のように用いる
 - `UNION`
@@ -108,8 +104,6 @@ SELECT * FROM diaries FULL JOIN comments on diaries.id = comments.diary_id ORDER
 select schedule."scheduleName", comments.comment, users.userName from comments left join schedule on schedule."scheduleId" = comments."scheduleId" join users on users."userId" = comments."userId";
 ```
 
-
-
 ## join は複数回適用させることができる
 
 ```sql
@@ -123,16 +117,12 @@ join users on users."userId" = comments."userId";
 
 ```
 
-
-
 ## サブクエリの例
 
 ```sql
 delete from candidate where candidate."scheduleId" in (select candidate."scheduleId" from candidate left join schedule on schedule."scheduleId" = candidate."scheduleId" where schedule."sch
 eduleId" is null);
 ```
-
-
 
 ## 参考
 

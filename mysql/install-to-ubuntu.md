@@ -10,8 +10,6 @@ $ sudo apt install -y mysql-server
 $ sudo mysql_secure_installation
 ```
 
-
-
 ## 起動
 
 ```bash

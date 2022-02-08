@@ -11,9 +11,9 @@
 ## gitの設定
 
 ```bash
-$ git config --list / git config -l
-$ git config --global user.name "my name"
-$ git config --global user.email "my email"
+git config --list / git config -l
+git config --global user.name "my name"
+git config --global user.email "my email"
 ```
 
 `~/.gitconfig`が作成され、その中に設定が書かれる。`git config`の設定は以下の3段階。
@@ -62,8 +62,8 @@ origin  https://github.com/nokazn/git.git (push)
 ### ローカルリポジトリをリモートリポジトリに反映
 
 ```bash
-$ git push origin master
-$ git push origin master:master
+git push origin master
+git push origin master:master
 ```
 
 `git push <リモートリポジトリ> <ローカルブランチ>:<リモートブランチ>`の意
@@ -71,9 +71,9 @@ $ git push origin master:master
 ### リモートリポジトリからローカルリポジトリへコピー
 
 ```bash
-$ git clone
-$ git pull
-$ git fetch
+git clone
+git pull
+git fetch
 ```
 
 - `git clone` - リモートリポジトリ自体をコピー

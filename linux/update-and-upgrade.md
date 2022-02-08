@@ -3,8 +3,8 @@
 ## Ubuntu などの Debian 系 (apt / apt-get)
 
 ```bash
-$ sudo apt update
-$ sudo apt upgrade
+sudo apt update
+sudo apt upgrade
 ```
 
 ### update
@@ -22,13 +22,11 @@ $ sudo apt upgrade
 - 更新されたパッケージのリストに基づいてインストール済みのパッケージを更新
 - 新規のパッケージのインストールやインストール済みのパッケージの削除を**行う**
 
-
-
 ## CentOS などの RedHat 系 (yum)
 
 ```bash
-$ sudo yum update
-$ sudo yum upgrade
+sudo yum update
+sudo yum upgrade
 ```
 
 ### update
