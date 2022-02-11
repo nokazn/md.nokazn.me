@@ -33,4 +33,4 @@ $ terraformer import aws -r lambda,sqs,cloudwatch, --regions=ap-northeast-1 --pa
 
 - <https://beyondjapan.com/blog/2020/05/terraformer-import-existing-infrastructure/>
 - <https://engineer.blog.lancers.jp/sre/versionup-terraform/>
-  - provider が `aws` (deprecated) になっていたので、`hashicopr/aws` に書き換える必要がある
+  - provider が `aws` (deprecated) になっていたので、`hashicorp/aws` に書き換える必要がある

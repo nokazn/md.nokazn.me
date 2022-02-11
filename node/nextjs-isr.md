@@ -106,7 +106,7 @@ my-app:
 $ NODE_ENV=development AWS_S3_BUCKET_REGION=ap-northeast-1 sls
 ```
 
-- Serverless Framerork のダッシュボードからリポジトリと連携すれば、自動デプロイできるらしい
+- Serverless Framework のダッシュボードからリポジトリと連携すれば、自動デプロイできるらしい
   - 参考) <https://www.serverless.com/blog/announcement-cicd/>
 
 ![Announcing Serverless CI/CD](https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2020-02-01-announcement-cicd/BranchDeploymentStatusEdit.png)

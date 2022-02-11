@@ -48,7 +48,7 @@ declare global {
 ### ちなみに
 
 `typeRoots` は `/// <reference types='' />` のような Triple Slash directives を解決する際に有効なものらしい。
-デフォルトでは `@typs/` が設定されており、`**/node_modules/@types/` 配下にある npm パッケージの型定義はビルド時にコンパイラが global に参照できる。global な型定義を持たせないライブラリの型定義をここに配置するのはおそらく正しくない。
+デフォルトでは `@types/` が設定されており、`**/node_modules/@types/` 配下にある npm パッケージの型定義はビルド時にコンパイラが global に参照できる。global な型定義を持たせないライブラリの型定義をここに配置するのはおそらく正しくない。
 
 ## 参考
 

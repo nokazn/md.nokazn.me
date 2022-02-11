@@ -10,4 +10,4 @@
 
 ## 参考
 
-[MySQL CLI Cheatsheet](https://gist.github.com/hofmannsven/9164408)
+[MySQL CLI cheat sheet](https://gist.github.com/hofmannsven/9164408)

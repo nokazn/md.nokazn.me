@@ -77,7 +77,7 @@ multiple lines comment
 ### `let`
 
 - 再代入可
-- 初期値を指定しなければ `undefiend` が設定される
+- 初期値を指定しなければ `undefined` が設定される
 
 ### `var`
 
@@ -189,7 +189,7 @@ console.log(1; // => SyntaxError: missing ) after argument list
 
 - Aggregate Error
   - 複数のエラーを1つにまとめる
-  - `Promies.any()` の Promise が reject されたときなど
+  - `Promise.any()` の Promise が reject されたときなど
 - (Eval Error)
   - `eval()` 内で発生したエラー
   - 現在は JavaScript からは使用されないが、後方互換性のため、`EvalError` オブジェクト自体はまだ存在している
@@ -324,7 +324,7 @@ console.log(9007199254740992n); // => 9007199254740992n
 1.2n; // => Uncaught SyntaxError: Invalid or unexpected token
 ```
 
-#### Numberic Separators (ES2021 以降)
+#### Numeric Separators (ES2021 以降)
 
 - 大きい桁の数値を読みやすくするためにアンダースコア (`_`)  を含めることができる
 - リテラルの先頭、末尾、小数点や `e` の前後には付けることができない
@@ -373,14 +373,14 @@ var undefined = 'foo';
 console.log(undefined); // => 'foo'
 
 // ローカル変数では現在も上書きできてしまう
-function overwriteUndefiend() {
+function overwriteUndefined() {
     var undefined = 1;
-    conosle.log(undefined);
+    console.log(undefined);
 }
 overwriteUndefined(); // => 1
 ```
 
-`void` 演算子に任意の引数をとらせると常にグローバルの `undefiend` を返すため安全であるが、そもそも `undefined` の書き換えはやるべきでない。
+`void` 演算子に任意の引数をとらせると常にグローバルの `undefined` を返すため安全であるが、そもそも `undefined` の書き換えはやるべきでない。
 
 #### オブジェクトリテラル
 
@@ -435,7 +435,7 @@ console.log(Number('1')); // => 1
 ```js
 const obj = { key: undefined };
 console.log(obj.key); // => undefined
-console.log(obj.differentKey); // => undefiend
+console.log(obj.differentKey); // => undefined
 ```
 
 ## 1.6 演算子
@@ -521,7 +521,7 @@ console.log([1, 2] === [1, 2]); // => false
 
 オペランドの等価性を**ざっくり**比較し、真偽値を返す。
 比較する前に暗黙的な型変換が行われ、予測しにくい挙動になることが多いので基本的に避けるべき。
-`== null` は `null` と `undeifned` を1つの式でチェックできるため例外的に使われることがある。
+`== null` は `null` と `undefined` を1つの式でチェックできるため例外的に使われることがある。
 
 ```js
 console.log(1 == 1); // => true
@@ -579,7 +579,7 @@ console.log(0b1111 ^ 0b1001); // => 0b0110
 
 ```js
 // n を否定演算すると -(x + 1)
-conosole.log(~15); // => -16
+console.log(~15); // => -16
 console.log(~-15); // => -14
 
 const str = '森林大十一';
@@ -644,7 +644,7 @@ falsey な値は以下で全部
 - `NaN`
 - `''`
 
-上記以外はすべて truethy な値である。
+上記以外はすべて truthy な値である。
 
 - AND 演算子 (`??`)
 
@@ -652,7 +652,7 @@ falsey な値は以下で全部
 
   - 左辺が `false` の時点で右辺を評価せず左辺を返す
 
-    - 左辺が truethy の場合のみ右辺を返す式を書きたいときに用いる (jsx 内とか)
+    - 左辺が truthy の場合のみ右辺を返す式を書きたいときに用いる (jsx 内とか)
 
         ```jsx
         return isLoggedin && <div>Logged in!</div>;
@@ -674,7 +674,7 @@ falsey な値は以下で全部
 
 - 条件演算子 (三項演算子)
 
-  - `(condition) ? (truethy なときの式) : (falsy なときの式)`
+  - `(condition) ? (truthy なときの式) : (falsy なときの式)`
   - JavaScript では3つのオペランドをとる演算子は条件演算子のみなので、そのまま三項演算子と呼ばれることも多い
   - `if` 文は返り値をもたないため、式ベースで書きたいときに使える
 
@@ -730,7 +730,7 @@ Boolean(0); // => false
 Boolean(''); // => false
 ```
 
-- `Boolean`のコンストラクタ関数を通すと falsy な値では  `false`、それ以外の truethy な値では`true`が返る
+- `Boolean`のコンストラクタ関数を通すと falsy な値では  `false`、それ以外の truthy な値では`true`が返る
 - 否定演算子を`!!`として、2回用いても同じ結果が得られる
 
 ### 数値から文字列の変換
@@ -791,7 +791,7 @@ String(() => {}); // => "() => {}"
 
 ```js
 // 関数宣言
-funtion 関数名(仮引数1, 仮引数2) {
+function 関数名(仮引数1, 仮引数2) {
     // 仮引数は関数内で扱える
     console.log(仮引数1);
     return 返り値;
@@ -1048,7 +1048,7 @@ if (条件式)
 if (条件式) 文;
 ```
 
-if の後の条件式は暗黙な型変換が行われた後、falsy か truethy かを判断している。
+if の後の条件式は暗黙な型変換が行われた後、falsy か truthy かを判断している。
 
 ### else / else if 文
 
@@ -1122,7 +1122,7 @@ const getVersion = () => {
 
 ### `while` 文
 
-- 条件内が truethy な間はブロック内の処理を繰り返す
+- 条件内が truthy な間はブロック内の処理を繰り返す
 - 条件式によっては無限ループが発生してしまうので取り扱いに注意する
   - 条件式のミスが発生要因のほとんど
   - 意図的にクライアントアプリケーションに無限ループを発生させると不正指令電磁的記録に関する罪に問われることもある
@@ -1232,8 +1232,8 @@ const filterEven1 = (numbers) => {
 const filterEven2 = (numbers) => numbers.filter((num) => num % 2 === 0);
 
 const arr = [1, 5, 10, 15, 20];
-console.log(filtereven1(arr)); // => [10, 20]
-console.log(filtereven2(arr)); // => [10, 20]
+console.log(filterEven1(arr)); // => [10, 20]
+console.log(filterEven2(arr)); // => [10, 20]
 ```
 
 ### `for...in` 文
@@ -1344,7 +1344,7 @@ const obj = {
 console.log(obj.key); // => 'value1'
 // ブランケットでアクセス
 console.log(obj['my-prop']); // => 'value2'
-conosle.log(obj[123]); // => 'value3'
+console.log(obj[123]); // => 'value3'
 // ブランケットの中は変数も入れられる
 const key = 'my-prop';
 console.log(obj[key]); // => 'value2'
@@ -1397,14 +1397,14 @@ obj2.key = 'value2';
 
 ### プロパティの存在を確認する
 
-- JavaScript では存在しないプロパティへアクセスしても例外を投げず、`undeifned` を返す
-  - プロパティに `undefiend` が設定されている場合と、キー自体が存在しない場合を区別できない
+- JavaScript では存在しないプロパティへアクセスしても例外を投げず、`undefined` を返す
+  - プロパティに `undefined` が設定されている場合と、キー自体が存在しない場合を区別できない
 - 存在しないプロパティをネストしてアクセスしようとすると例外を投げる
   - `undefined` はオブジェクトではない
 
 ```js
 const obj = {};
-console.log(obj.key); // => undeifned
+console.log(obj.key); // => undefined
 console.log(obj.key.key); // => Uncaught TypeError: Cannot read property 'key' of undefined
 ```
 
@@ -1441,12 +1441,12 @@ console.log(obj?.a?.b); // => 'nested'
 console.log(obj?.dangerous?.dangerous); // => undefined
 ```
 
-Optional chanining 演算子はオブジェクトのブランケット記法にも使える
+Optional chaining 演算子はオブジェクトのブランケット記法にも使える
 
 ```js
 const obj = { 1: 'value' };
 console.log(obj?.[1]?.['key']); // => 'value'
-console.log(obj?.[2]?.['dangorous']); // => undefined
+console.log(obj?.[2]?.['dangerous']); // => undefined
 ```
 
 ### `toString` メソッド
@@ -1574,7 +1574,7 @@ console.log(obj.hasOwnProperty === Object.prototype.hasOwnProperty); // => true
 ### Array も `Object` を継承している
 
 - 配列のインスタンスは `Array.prototype` オブジェクトを継承しており、`Array.prototype` オブジェクトは `Object.prototype` オブジェクトを継承している (プロトタイプチェーン)
-- 配列も `Object.prototye` に定義されているメソッドを利用できる
+- 配列も `Object.prototype` に定義されているメソッドを利用できる
 
 ```js
 const numbers = [1, 2, 3];
@@ -1734,8 +1734,8 @@ const arr = [1, 2, 3];
 arr.push(4);
 console.log(arr); // => [1, 2, 3, 4];
 // 末尾を削除
-const popedItem = arr.pop();
-console.log(arr, popedItem); // => [1, 2, 3] 4
+const poppedItem = arr.pop();
+console.log(arr, poppedItem); // => [1, 2, 3] 4
 // 先頭に追加
 arr.unshift(0);
 console.log(arr); // => [0, 1, 2, 3]
@@ -1875,7 +1875,7 @@ console.log(doubleArr); // => [2, 4, 6]
 
 ```js
 const arr = [1, 2, 3];
-const oddArr = arr.filter((currrent, index, array) => current % 2 === 1);
+const oddArr = arr.filter((current, index, array) => current % 2 === 1);
 console.log(oddArr); // => [1, 3]
 ```
 
@@ -2017,13 +2017,13 @@ console.log(str); // => 'アオイ'
 #### 文字列の分解と結合
 
 ```js
-const strs = 'Red, Blue, Green'.split(', ');
-console.log(strs); // => ['Red', 'Blue', 'Green']
-strs.join('・');
-console.log(strs); // => 'Red・Blue・Green'
+const strings = 'Red, Blue, Green'.split(', ');
+console.log(strings); // => ['Red', 'Blue', 'Green']
+strings.join('・');
+console.log(strings); // => 'Red・Blue・Green'
 
-const strs2 = 'a   b c                 d'.split('/\s+/');
-console.log(strs2); // => ['a', 'b', 'c', 'd']
+const strings2 = 'a   b c                 d'.split('/\s+/');
+console.log(strings2); // => ['a', 'b', 'c', 'd']
 ```
 
 #### 文字列の長さ
@@ -2031,8 +2031,8 @@ console.log(strs2); // => ['a', 'b', 'c', 'd']
 `Strings#length` プロパティが文字列の長さを返す。
 
 ```js
-conosle.log('string'.length); // => 5
-conosle.log(''.length); // => 0
+console.log('string'.length); // => 5
+console.log(''.length); // => 0
 ```
 
 ### 文字列の比較
@@ -2204,9 +2204,9 @@ for (const match of matched) {
 
 ```js
 const pattern = /ECMAScript (\d+)/;
-const [all, caputured] = 'ECMAScript 6'.match(pattern);
+const [all, captured] = 'ECMAScript 6'.match(pattern);
 console.log(all); // => 'ECMAScript 6'
-console.log(caputured); // => '6'
+console.log(captured); // => '6'
 ```
 
 ### `RegExp#exec()` での `String#matchAll()`
@@ -2327,8 +2327,8 @@ tag(`template ${0} literal ${1}`); // => 'template 0 literal 1'
 このときの `tag` 関数をタグ関数 (Tag function) という。
 
 ```js
-const tag = (strs, ...values) => {
-    console.log(strs);
+const tag = (strings, ...values) => {
+    console.log(strings);
     console.log(values);
 };
 tag`template ${0} literal ${1}`;
@@ -2339,8 +2339,8 @@ tag`template ${0} literal ${1}`;
 タグつきテンプレートを最終的に評価される文字列にするには以下のようにする。
 
 ```js
-const stringRaw = (strs, ...values) => {
-    // strs 内の要素を values 内の要素で結合していく
+const stringRaw = (strings, ...values) => {
+    // strings 内の要素を values 内の要素で結合していく
     return strings.reduce((res, str, i) => result + value[i - 1] + str);
 };
 console.log(stringRaw`template ${0} literal ${1}`); // => `template 0 literal 1`
@@ -2373,7 +2373,7 @@ console.log(String.fromCodePoint(12354)); // => 'あ'
 // 'あ' の Code Point を16進数で求める
 console.log('あ'.codePointAt(0).toString(16)); // => '3042'
 // 16進数の Code Point を文字列内で指定して文字列を作成
-conosle.log('\u{3042}\u{3042}'); // => ああ
+console.log('\u{3042}\u{3042}'); // => ああ
 ```
 
 ### Code Point と Code Unit の違い
@@ -2645,7 +2645,7 @@ console.log(x); // => 0
 
 #### `let` と `var` の共通点
 
-- 変数宣言時に初期値を設定しない場合は `undefinde` が割り当てられる
+- 変数宣言時に初期値を設定しない場合は `undefined` が割り当てられる
 - 宣言後に値を (再) 代入できる
 
 ```js
@@ -2658,11 +2658,11 @@ let varX = 'declared by var';
 
 #### `let` と `var` の相違点
 
-- `let` では宣言前に変数を参照すると `ReferenceError` を投げるが、`var` では宣言前に変数を参照しても `undeifned` になるだけで例外を投げない
+- `let` では宣言前に変数を参照すると `ReferenceError` を投げるが、`var` では宣言前に変数を参照しても `undefined` になるだけで例外を投げない
   - 変数宣言を宣言と代入に分けて考えたとき、`var` による変数宣下では、宣言が暗黙的に**最も近いスコープやグローバルスコープ**の先頭に巻き上げられ、代入はコードを書いた箇所で実行されるという動作をする
 
 ```js
-console.log(x); // => undeifned
+console.log(x); // => undefined
 var x = 'declared by var';
 console.log(x); // => 'declared by var'
 ```
@@ -2671,7 +2671,7 @@ console.log(x); // => 'declared by var'
 
 ```js
 var x;
-console.log(x); // => undeifned
+console.log(x); // => undefined
 x = 'declared by var';
 console.log(x); // => 'declared by var'
 ```
@@ -2726,7 +2726,7 @@ hello(); // => Hello
 ```
 
 のように解釈されたと考えることができる。
-`function` で宣言された関数の巻き上げは `var` によって宣言された変数と違って関数が `undefiend` になることがなく呼び出しはできるため、実質的な問題となることは少ない。
+`function` で宣言された関数の巻き上げは `var` によって宣言された変数と違って関数が `undefined` になることがなく呼び出しはできるため、実質的な問題となることは少ない。
 
 無名関数を `var` に代入した場合は、上記の `var` の挙動に則るため、巻き上げにより `undefined` となって関数を呼び出すことができない。
 
@@ -2748,7 +2748,7 @@ var hello = function() {
     console.log(x); // => 'foo'
 })();
 // x はグローバルスコープから参照できない
-console.log(typeof foo === 'undeifned'); // => true
+console.log(typeof foo === 'undefined'); // => true
 ```
 
 ES2015 以降では`let` と `const` でブロックスコープ内で変数宣言できるため、グローバルスコープの汚染を防ぐための即時実行関数は必要なくなった。
@@ -2758,7 +2758,7 @@ ES2015 以降では`let` と `const` でブロックスコープ内で変数宣�
     const x = 'foo';
     console.log(x); // => 'foo'
 }
-console.log(typeof foo = 'undeifned'); // => true
+console.log(typeof foo = 'undefined'); // => true
 ```
 
 ### クロージャー
@@ -2775,9 +2775,9 @@ function createCounter() {
     return increment;
 }
 
-const conunter = createCounter();
-conunter(); // => 1
-conunter(); // => 2
+const counter = createCounter();
+counter(); // => 1
+counter(); // => 2
 const anotherCounter = createCounter();
 anotherCounter(); // => 1
 anotherCounter(); // => 2
@@ -2878,7 +2878,7 @@ console.log(this); // => window
 
 ```html
 <script type="module">
-console.log(this); // => undeinfed
+console.log(this); // => undefined
 </script>
 ```
 
@@ -2958,7 +2958,7 @@ const person = {
 };
 console.log(person.sayName()); // => 'foo'
 const { sayName } = person;
-// this は undeifned なので例外を投げる
+// this は undefined なので例外を投げる
 console.log(sayName()); // => Uncaught TypeError: Cannot read property 'name' of undefined
 ```
 
@@ -2966,7 +2966,7 @@ console.log(sayName()); // => Uncaught TypeError: Cannot read property 'name' of
 
 - 関数オブジェクトには `call`, `apply`, `bind` のように明示的に `this` を指定して関数を呼び出せるメソッドが存在する。
 
-- `Functio#call(this の値, ...引数)
+- `Function#call(this の値, ...引数)
 
   - `this` を指定する必要のない場合は `null` を渡す
 
@@ -2982,7 +2982,7 @@ console.log(sayName()); // => Uncaught TypeError: Cannot read property 'name' of
     console.log(say.call(person, 'Hello, ')); // => 'Hello, foo'
     ```
 
-- `Functio#apply(this の値, [...引数])`
+- `Function#apply(this の値, [...引数])`
 
   - `this` を指定する必要のない場合は `null` を渡す
 
@@ -2998,7 +2998,7 @@ console.log(sayName()); // => Uncaught TypeError: Cannot read property 'name' of
     console.log(say.apply(person, ['Hello,'])); // => 'Hello, foo'
     ```
 
-- `Functio#bind(this の値, ...引数)`
+- `Function#bind(this の値, ...引数)`
 
     ```js
     'use strict';
@@ -3019,8 +3019,8 @@ console.log(sayName()); // => Uncaught TypeError: Cannot read property 'name' of
 ```js
 const obj = {
     prefix: 'pre',
-    prefixArray(strs) {
-        return strs.map(function(str) {
+    prefixArray(strings) {
+        return strings.map(function(str) {
             return this.prefix + '-' + str;
         });
     },
@@ -3034,9 +3034,9 @@ obj.prefixArray([1, 2, 3]); // => ["undefined-1", "undefined-2", "undefined-3"]
 'use strict';
 const obj = {
     prefix: 'pre',
-    prefixArray(strs) {
+    prefixArray(strings) {
         const self = this;
-        return strs.map(function(str) {
+        return strings.map(function(str) {
             return self.prefix + '-' + str;
         });
     },
@@ -3052,8 +3052,8 @@ obj.prefixArray([1, 2, 3]); // => ["pre-1", "pre-2", "pre-3"]
 'use strict';
 const obj = {
     prefix: 'pre',
-    prefixArray(strs) {
-        return strs.map((str) => self.prefix + '-' + str);
+    prefixArray(strings) {
+        return strings.map((str) => self.prefix + '-' + str);
     },
 };
 obj.prefixArray([1, 2, 3]); // => ["pre-1", "pre-2", "pre-3"]
@@ -3199,7 +3199,7 @@ class Counter {
 }
 
 const counterA = new Counter();
-const coutnerB = new Coutnre();
+const counterB = new Counter();
 counterA.increment();
 console.log(counterA.count); // => 1
 // プロパティはインスタンスごとに独立
@@ -3316,7 +3316,7 @@ class MyClass {
     }
 }
 const instance = new MyClass();
-const Protptype = Object.getPrototypeOf(instance);
+const Prototype = Object.getPrototypeOf(instance);
 console.log(instance.method === Prototype.method); // => true
 ```
 
@@ -3603,7 +3603,7 @@ fs.readFile('./example.txt', (err, data) => {
 const dummyFetch = (path, successCallback, failureCallback) => {
     setTimeout(() => {
         if (path.startsWith('/success')) {
-            successCallback({ body: `Reponse body of ${path}` });
+            successCallback({ body: `Response body of ${path}` });
         } else {
             failureCallback(new Error('NOT FOUND'));
         }
@@ -3635,12 +3635,12 @@ const executor = (resolve, reject) => {
     // 非同期の処理が失敗したときは reject を呼ぶ
 };
 const promise = new Promise(executor);
-const onFullfilled = () => { console.log('resolved'); };
+const onFulfilled = () => { console.log('resolved'); };
 const onRejected = () => { console.log('rejected'); };
 // `then` メソッドで成功時と失敗時に呼ばれるコールバック関数を登録
-promise.then(onFullfilled, onRejected);
+promise.then(onFulfilled, onRejected);
 // `catch` メソッドは `then` の第二引数にコールバックを書くのと同じ
-promise.then(onFullfilled).catch(onRejected);
+promise.then(onFulfilled).catch(onRejected);
 ```
 
 ### `Promise#then` と `Promise#catch`
@@ -3656,16 +3656,16 @@ const delay = (timeout) => {
     });
 };
 
-const fullfilledCallback = () => { console.log('resolved'); };
+const fulfilledCallback = () => { console.log('resolved'); };
 const rejectedCallback = () => { console.log('rejected'); };
 // 失敗時のコールバックを省略
-delay.then(fullfilledCallback);
+delay.then(fulfilledCallback);
 // 成功時のコールバックを省略
 delay.then(undefined, rejectedCallback);
 // 第一引数に成功時のコールバック、第二引数に失敗時のコールバックを登録
-delay.then(fullfilledCallback, rejectedCallback);
+delay.then(fulfilledCallback, rejectedCallback);
 // then メソッドに成功時のコールバック、catch メソッドに失敗時のコールバックを登録
-delay.then(fullfilledCallback).catch(rejectedCallback);
+delay.then(fulfilledCallback).catch(rejectedCallback);
 ```
 
 ### Promise と例外
@@ -3688,26 +3688,26 @@ throwPromise().catch((err) => {
 
 `Promise` インスタンスには内部的に以下の3つの状態が存在する。
 
-- Fullfilled
+- Fulfilled
   - `resolve` したときの状態
   - `then` メソッドの第一引数に渡されたコールバック関数が呼ばれる
 - Rejected
   - `reject` または例外が発生したときの状態
   - `then` メソッドの第二引数に渡されたコールバック関数か、もしくは `catch` 関数に渡されたコールバック関数に渡される
 - Pending
-  - Fullfilled または Rejected でない状態
+  - Fulfilled または Rejected でない状態
   - `new Promise` でインスタンスを作成したときの初期状態
-  - 一度 Fullfilled または Rejected の状態 (Settled) になればそれ以降は変化しない
+  - 一度 Fulfilled または Rejected の状態 (Settled) になればそれ以降は変化しない
 
 ```js
 const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve(); // この時点で Fullfilled からは変わらない
+        resolve(); // この時点で Fulfilled からは変わらない
         reject(new Error('Error'));
     });
 }, 10);
 promise.then(() => {
-    console.log('fullfilled');
+    console.log('fulfilled');
 }, (err) => {
     // 呼ばれない
 });
@@ -3715,14 +3715,14 @@ promise.then(() => {
 
 ### `Promise.resolve`
 
-Fullfilled になった `Promise` インスタンスを作成できる
+Fulfilled になった `Promise` インスタンスを作成できる
 
 ```js
-const fullfilled = Promise.resolve(1);
+const fulfilled = Promise.resolve(1);
 // 以下と同じ意味
-const fullfilled2 = new Promise((resolve) => { resolve(1); });
+const fulfilled2 = new Promise((resolve) => { resolve(1); });
 
-fullfilled.then((i) => {
+fulfilled.then((i) => {
     console.log(`callback is called with ${i}`); // => callback is called with 1
 });
 ```
@@ -3772,7 +3772,7 @@ Promise.resolve(1).then((value) => {
 コールバック関数内で `Promise` インスタンスを返したとき、Rejected な状態の Promise インスタンスを返した場合は次に失敗時の処理が呼ばれる。
 
 ```js
-Promies.resolve().then(() => {
+Promise.resolve().then(() => {
     return Promise.reject(new Error('Error'));
 }).then(() => {
     console.log('呼ばれない');
@@ -3785,7 +3785,7 @@ Promies.resolve().then(() => {
 
 ### Promise チェーンの最後に処理を書く
 
-`finally` で非同期処理の終了状態 (Fullfilled / Rejected) に関わらず、`Promise#finally` メソッドを使うことで代入を1カ所にまとめることができる
+`finally` で非同期処理の終了状態 (Fulfilled / Rejected) に関わらず、`Promise#finally` メソッドを使うことで代入を1カ所にまとめることができる
 
 ```js
 const promise = Math.random() < 0.5 ? Promise.resolve() : Promise.reject();
@@ -3824,7 +3824,7 @@ Promise.all([
 
 - `Promise.all` と同様に Promise インスタンスを配列で複数渡す
 - 配列内の Promise インスタンスのうち最初に Settled 状態になれば次の処理を実行
-- 最初に Settled になった Promise が Fullfilled の場合は Fullfilled を、Rejected の場合は Rejected を返す
+- 最初に Settled になった Promise が Fulfilled の場合は Fulfilled を、Rejected の場合は Rejected を返す
 
 ```js
 const delay = (timeoutMs) => {
@@ -4401,7 +4401,7 @@ const formatDate = (date) => {
     const mm = date.getMonth() + 1;
     const dd = date.getDate();
     // date
-    return `${String(yyyy)}${String(mm).padStrt(2, '0')}${String(dd).padStrt(2, '0')}`;
+    return `${String(yyyy)}${String(mm).padStart(2, '0')}${String(dd).padStart(2, '0')}`;
 }
 console.log(formatDate('2006-01-02T15:04:05.999')); // => '2006/01/02'
 ```
@@ -4410,7 +4410,7 @@ console.log(formatDate('2006-01-02T15:04:05.999')); // => '2006/01/02'
 
 ```js
 const now = new Date();
-const timezoneoffsetInHours = now.getTimezoneoffset() / 60;
+const timezoneOffsetInHours = now.getTimezoneOffset() / 60;
 // UTC の現在の時間を計算できる
 console.log(`Hours in UTC: ${now.getHours() + timezoneOffsetInHours}`);
 ```
@@ -4563,7 +4563,7 @@ console.log(myMoudle.default);
 モジュール内のトップレベルな処理を実行させたいとき、副作用のためのインポート構文を用いる。
 
 ```js
-// side-effecs.js
+// side-effects.js
 window.foo = 'foo';
 ```
 

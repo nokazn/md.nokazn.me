@@ -101,9 +101,9 @@ echo "set clipboard=unnamedplus" > ~/dotfiles/.vimrc
 
 ## 参考
 
-[WSL2におけるVcXsrvの設定 - Qiita](https://qiita.com/ryoi084/items/0dff11134592d0bb895c)
-[Can't use X-Server in WSL 2 · Issue #4106 · microsoft/WSL](https://github.com/microsoft/WSL/issues/4106)
-[WSLコンソールのコピペ方法まとめ（Vim,Tmux) - Qiita](https://qiita.com/kenji0x02/items/f77008985818583bf32b)
-[WSL2におけるVcXsrvの設定 - Qiita](https://qiita.com/ryoi084/items/0dff11134592d0bb895c)
-[vim-gnomeとvim-gtkの違い | うなすけとあれこれ](https://blog.unasuke.com/2014/difference-of-vim-gnome-and-vim-gtk/)
-<https://sy-base.com/myrobotics/vim/vim_use_clipboard/>
+- [WSL2におけるVcXsrvの設定 - Qiita](https://qiita.com/ryoi084/items/0dff11134592d0bb895c)
+- [Can't use X-Server in WSL 2 · Issue #4106 · microsoft/WSL](https://github.com/microsoft/WSL/issues/4106)
+- [WSLコンソールのコピペ方法まとめ（Vim,Tmux) - Qiita](https://qiita.com/kenji0x02/items/f77008985818583bf32b)
+- [WSL2におけるVcXsrvの設定 - Qiita](https://qiita.com/ryoi084/items/0dff11134592d0bb895c)
+- [vim-gnomeとvim-gtkの違い | うなすけとあれこれ](https://blog.unasuke.com/2014/difference-of-vim-gnome-and-vim-gtk/)
+- [Vimでクリップボードからのペーストを可能にする – MY ROBOTICS](https://sy-base.com/myrobotics/vim/vim_use_clipboard/)

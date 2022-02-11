@@ -31,7 +31,7 @@ $ ssh-keygen -l -f ~/.ssh/id_rsa.pub
 
 以下のような設定ファイルを追加する。
 
-```diff:~/.ssh/confg
+```diff:~/.ssh/config
 + Host github.com
 +   HostName github.com
 +   User git

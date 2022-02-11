@@ -88,7 +88,7 @@ $ which yarn
 
 ## Node.js  のアンインストール
 
-nodenve で特定のバージョンを削除する場合は以下のようにする。
+nodenv で特定のバージョンを削除する場合は以下のようにする。
 
 ```bash
 nodenv uninstall 12.16.3

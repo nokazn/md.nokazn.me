@@ -150,7 +150,7 @@ function escapeHTML(strings, ...values) {
 }
 
 // タグつきテンプレート関数の形式で呼び出す
-const view = espaceHTML`
+const view = escapeHTML`
 <h4>${user.name} (@${user.login})</h4>
 <img src="${user.avatar_url}" alt="${user.login}" height="100">
 `;
@@ -183,7 +183,7 @@ function main1() {
 // Async Function
 async function main2() {
     try {
-        const user = await fetchUserInfo('js-promer-example')
+        const user = await fetchUserInfo('js-primer-example')
         const view = createView(user);
         displayView(view);
     } catch (err) {
@@ -286,7 +286,7 @@ fs.readFile('sample.md', { encoding: 'utf-8' }, (err, file) => {
 // 同期
 try {
     const file = fs.readFileSync('sample.md', { encoding: 'utf-8' });
-    cosole.log(file);
+    console.log(file);
 } catch (err) {
     console.error(err);
 }
@@ -368,7 +368,7 @@ it('converts Markdown to HTML (GFM=false)', () => {
     assert.strictEqual(md2html(sample, { gfm: false }).trimEnd(), expected.trimEnd());
 });
 
-it('converts Makdown to HTML (GFM=true)', () => {
+it('converts Markdown to HTML (GFM=true)', () => {
     const sample = fs.readFileSync(path.resolve(__dirname, './fixtures/sample.md'), { encoding: 'utf-8' });
     const expected = fs.readFileSync(path.resolve(__dirname, './fixtures/expected.html'), { encoding: 'utf8' });
     assert.strictEqual(md2html(sample, { gfm: false }).trimEnd(), expected.trimEnd());
@@ -403,7 +403,7 @@ it('converts Makdown to HTML (GFM=true)', () => {
 
 ```css
 /* クラス名で指定 */
-.todoapp {
+.todo-app {
     background: black;
 }
 /* id 属性で指定 */
