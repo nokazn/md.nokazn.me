@@ -5,9 +5,11 @@
     "url": "https://github.com/nokazn"
   },
   "scripts": {
+    "spell-check": "cspell ./{,**/}*.{js,json,md}",
     "lint:md": "markdownlint . --ignore-path .gitignore"
   },
   "devDependencies": {
+    "cspell": "^5.18.4",
     "markdownlint-cli": "^0.31.0"
   }
 }
