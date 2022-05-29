@@ -25,7 +25,7 @@ jobs:
       - name: Spell check
         run: |
           yarn check:spell
-          yarn lint:md
+          yarn check:lint:md
 
   pre-commit:
     runs-on: ubuntu-20.04
