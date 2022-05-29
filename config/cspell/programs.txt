@@ -1,0 +1,13 @@
+Commandline
+conninfo
+dotfiles
+ECONNREFUSED
+fontconfig
+makepkg
+netsh
+oldstate
+PKGBUILD
+typeof
+unshift
+usermod
+WORKDIR

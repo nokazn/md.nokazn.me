@@ -120,8 +120,7 @@ join users on users."userId" = comments."userId";
 ## サブクエリの例
 
 ```sql
-delete from candidate where candidate."scheduleId" in (select candidate."scheduleId" from candidate left join schedule on schedule."scheduleId" = candidate."scheduleId" where schedule."sch
-eduleId" is null);
+delete from candidate where candidate."scheduleId" in (select candidate."scheduleId" from candidate left join schedule on schedule."scheduleId" = candidate."scheduleId" where schedule."scheduleId" is null);
 ```
 
 ## 参考

@@ -1487,7 +1487,7 @@ console.log(obj); // => { "[object Object]": 2, Symbol(1): 1, Symbol(2): 2 }
 
 - `Object.keys()`: プロパティ名の配列
 - `Object.values()`: プロパティの値の配列
-- `Object.entiries()`: プロパティ名とプロパティの値の配列の配列
+- `Object.entries()`: プロパティ名とプロパティの値の配列の配列
 
 #### オブジェクトのマージと複製
 
@@ -1896,9 +1896,9 @@ console.log(total); // 6
 
 ```js
 function fn() {
-    console.log(argumetns[0]);
-    console.log(argumetns[1]);
-    console.log(argumetns[2]);
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]);
     console.log(typeof arguments.forEach); // => 'undefined'
     const argumentsList = Array.from(arguments);
     console.log(typeof argumentsList.forEach); // => 'function'
@@ -2200,7 +2200,7 @@ for (const match of matched) {
 
 #### マッチした文字列の一部を取得
 
-`String#match()` メソッドと `String#mtachAll()` メソッド内において、正規表現パターンに`()` を含ませた部分をマッチした部分からキャプチャすることができる。キャプチャした部分は、マッチした部分の情報を返す配列の2番目以降に`()`でキャプチャした分だけの文字列が格納される。
+`String#match()` メソッドと `String#matchAll()` メソッド内において、正規表現パターンに`()` を含ませた部分をマッチした部分からキャプチャすることができる。キャプチャした部分は、マッチした部分の情報を返す配列の2番目以降に`()`でキャプチャした分だけの文字列が格納される。
 
 ```js
 const pattern = /ECMAScript (\d+)/;
@@ -3365,7 +3365,7 @@ class Child extends Parent {
 
 ```js
 class Parent {
-    parentMedhod() {
+    parentMethod() {
         console.log('parent method');
     }
 }
@@ -4222,7 +4222,7 @@ console.log(set.has('value1')); // => true
 console.log(set.has('differentValue')); // => false
 // 削除
 console.log(set.delete('value1')); // => true
-console.log(set.delete('defferentValue')); // => false
+console.log(set.delete('differentValue')); // => false
 ```
 
 ### セットの反復処理
@@ -4474,7 +4474,7 @@ console.log(Math.trunc(-1.3)); // => -1
 - 名前空間: モジュールごとにスコープをもち、グローバルの名前空間を汚染しない
 - 再利用性: よく使う関数などをモジュールとして再利用できる
 
-### ECMAScirpt モジュールの構文
+### ECMAScript モジュールの構文
 
 - パース段階でモジュールの依存関係が解決され、存在しないモジュールを参照している場合はパース段階でエラーになる
 - `import` と `export` でモジュールのインポート / エクスポートができ、それぞれに名前付きとデフォルトの2種類がある
@@ -4543,7 +4543,7 @@ export { foo as MyModuleFoo, bar as MyModuleBar } from './my-module.js';
 // デフォルトエクスポートされているものを再エクスポート
 export { default } from './my-module.js';
 // デフォルトエクスポートされているものを別名で再エクスポート
-export { default as myMoudleDefault } from './my-module.js';
+export { default as myModuleDefault } from './my-module.js';
 // foo で名前付きエクスポートされているものをデフォルトエクスポートで再エクスポート
 export { foo as default } from './my-module.js';
 ```
@@ -4553,9 +4553,9 @@ export { foo as default } from './my-module.js';
 ```js
 import * as myModule from './my-module.js';
 // my-module.js で foo という名前でエクスポートされたもの
-console.log(myMoudle.foo);
+console.log(myModule.foo);
 // my-module.js デフォルトエクスポートされたもの
-console.log(myMoudle.default);
+console.log(myModule.default);
 ```
 
 #### 副作用のためのインポート
