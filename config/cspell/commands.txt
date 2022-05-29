@@ -1,5 +1,0 @@
-Commandline
-conninfo
-ECONNREFUSED
-netsh
-usermod

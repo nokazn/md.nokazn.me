@@ -1,3 +1,4 @@
-Vercel
 hashicorp
 Qiita
+spotify
+Vercel

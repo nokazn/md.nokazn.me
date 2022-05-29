@@ -3,10 +3,6 @@
   "language": "en",
   "dictionaryDefinitions": [
     {
-      "name": "commands",
-      "path": "./config/cspell/commands.txt"
-    },
-    {
       "name": "companies",
       "path": "./config/cspell/companies.txt"
     },

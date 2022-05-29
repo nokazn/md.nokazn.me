@@ -1,7 +1,9 @@
+astro
 buildpack
 choco
 colorschemes
 containerd
+dayjs
 devel
 docbook
 Fargate
@@ -22,6 +24,7 @@ libnss
 libpamac
 libreadline
 libsqlite
+libwebp
 libxmlsec
 libz
 markd
