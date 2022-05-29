@@ -6,12 +6,12 @@
     "url": "https://github.com/nokazn"
   },
   "scripts": {
-    "build": "astro build",
     "dev": "astro dev",
-    "lint:md": "markdownlint . --ignore-path .gitignore",
+    "build": "astro build",
     "preview": "astro preview",
-    "spell-check": "cspell ./{,**/}*.{js,json,md}",
-    "start": "astro dev"
+    "check:spell": "cspell ./{,**/}*.{js,json,md}",
+    "check:lint:md": "markdownlint . --ignore-path .gitignore",
+    "fix:format": "prettier ./{,**/}*.{{j,t}sx?,svelte} --write "
   },
   "dependencies": {
     "svelte": "^3.48.0"

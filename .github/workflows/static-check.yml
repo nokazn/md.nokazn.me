@@ -24,7 +24,7 @@ jobs:
           yarn --frozen-lockfile
       - name: Spell check
         run: |
-          yarn spell-check
+          yarn check:spell
           yarn lint:md
 
   pre-commit:
