@@ -1,4 +1,5 @@
 astro
+astrojs
 buildpack
 choco
 colorschemes
@@ -42,7 +43,6 @@ pacman
 Pacman
 pamac
 pgdg
-PGHOST
 pipenv
 Pipenv
 pkcs
@@ -54,7 +54,6 @@ vcxsrv
 vimrc
 vundle
 Vundle
-wslconfig
 wslpath
 Xfce
 xlaunch

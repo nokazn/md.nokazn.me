@@ -6,8 +6,10 @@ fontconfig
 makepkg
 netsh
 oldstate
+PGHOST
 PKGBUILD
 typeof
 unshift
 usermod
 WORKDIR
+wslconfig
