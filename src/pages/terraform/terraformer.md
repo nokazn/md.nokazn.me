@@ -6,7 +6,9 @@
 
 以下のファイルを作成しておく。
 
-```tf
+<!-- TODO: `.tf` ファイルのシンタックスハイライトを有効にする -->
+<!-- markdownlint-disable MD001 MD040 -->
+```
 # provider.tf
 provider "aws" {
   region = "ap-northeast-1"
@@ -31,6 +33,6 @@ $ terraformer import aws -r lambda,sqs,cloudwatch, --regions=ap-northeast-1 --pa
 
 ## 参考
 
-- <https://beyondjapan.com/blog/2020/05/terraformer-import-existing-infrastructure/>
-- <https://engineer.blog.lancers.jp/sre/versionup-terraform/>
+- [Terraformerを使ってTerraformに既存インフラのリソースをインポートする | 株式会社ビヨンド](https://beyondjapan.com/blog/2020/05/terraformer-import-existing-infrastructure/)
+- [Terraform v0.12.29 → v0.15.0にバージョンアップしました | ランサーズ（Lancers）エンジニアブログ](https://engineer.blog.lancers.jp/sre/versionup-terraform/)
   - provider が `aws` (deprecated) になっていたので、`hashicorp/aws` に書き換える必要がある

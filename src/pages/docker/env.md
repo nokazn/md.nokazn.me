@@ -2,7 +2,7 @@
 
 ## Dockerfile で `ENV` を指定した場合
 
-```dockerfile
+```docker
 FROM node:12.18.0-alpine as build
 ENV PROJECT_WORKDIR=/app/
 WORKDIR ${PROJECT_WORKDIR}
@@ -18,7 +18,7 @@ WORKDIR ${PROJECT_WORKDIR}
 
 ## `.env` ファイル内で環境変数を指定した場合
 
-```.yaml
+```yaml
 # .env
 PORT=3000
 ```
