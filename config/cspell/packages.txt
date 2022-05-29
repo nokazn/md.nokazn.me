@@ -52,6 +52,7 @@ PYENV
 sdkman
 vcxsrv
 vimrc
+vite
 vundle
 Vundle
 wslpath
