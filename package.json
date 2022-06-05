@@ -9,18 +9,23 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check:spell": "cspell ./{,**/}*.{js,json,md}",
+    "static-check": "run-s -c \"check:*\"",
+    "check:spell": "cspell \"./{,**/}*.{js,json,md}\"",
+    "check:format": "prettier \"./**/*.{{j,t}s{,x},svelte}\" --check --ignore-unknown",
     "check:lint:md": "markdownlint . --ignore-path .gitignore",
-    "fix:format": "prettier ./{,**/}*.{{j,t}sx?,svelte} --write "
+    "fix": "run-s -c \"fix:*\"",
+    "fix:format": "prettier \"./{,**/}*.{{j,t}s{x,},svelte}\" --write --ignore-unknown"
   },
   "dependencies": {
     "svelte": "^3.48.0"
   },
   "devDependencies": {
     "@astrojs/svelte": "^0.1.3",
-    "astro": "^1.0.0-beta.36",
+    "astro": "^1.0.0-beta.40",
     "cspell": "^5.18.4",
-    "markdownlint-cli": "^0.31.0"
+    "markdownlint-cli": "^0.31.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2"
   },
   "packageManager": "yarn@3.2.1",
   "engines": {
