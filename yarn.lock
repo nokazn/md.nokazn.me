@@ -47,9 +47,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^0.10.2":
-  version: 0.10.2
-  resolution: "@astrojs/markdown-remark@npm:0.10.2"
+"@astrojs/markdown-remark@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@astrojs/markdown-remark@npm:0.11.0"
   dependencies:
     "@astrojs/prism": ^0.4.1
     assert: ^2.0.0
@@ -71,7 +71,7 @@ __metadata:
     unist-util-map: ^3.1.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: 47a0be104d25e1e1e3d40862aeadf09204b150607ffff7a0e8671973d0919716d9a9aba54eac5f593ed54b699ac38624dc366e8921e6360bb5cb53953b64700d
+  checksum: ad2ee40bff5fb54656b54aaaeb091d9308cc24d07984c7b03aacc79c35d92b643d7aac3ed6c8c598d3fff5fcf53380b7078a2e27d3d982e5f2aaaccdf7eeb257
   languageName: node
   linkType: hard
 
@@ -1205,13 +1205,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^1.0.0-beta.40":
-  version: 1.0.0-beta.40
-  resolution: "astro@npm:1.0.0-beta.40"
+"astro@npm:^1.0.0-beta.41":
+  version: 1.0.0-beta.41
+  resolution: "astro@npm:1.0.0-beta.41"
   dependencies:
     "@astrojs/compiler": ^0.15.2
     "@astrojs/language-server": ^0.13.4
-    "@astrojs/markdown-remark": ^0.10.2
+    "@astrojs/markdown-remark": ^0.11.0
     "@astrojs/prism": 0.4.1
     "@astrojs/telemetry": ^0.1.2
     "@astrojs/webapi": ^0.12.0
@@ -1267,7 +1267,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 17334e5fbfcd7be1f080bc04579ecb0dcd0381f3352032a753ef19afb78227e62a716b5cea96a511824af02443583270655c5fd12fde264d6d7b5deeb809e711
+  checksum: a2fc1a52dd884c00b3f7b6bc8c3a6e6513e14566982e59055108ccf90ccae0fa6c7f6bc30b003d4d4720f12bed2473a42f08b9d3a1a88201c1ccd02889936665
   languageName: node
   linkType: hard
 
@@ -5616,7 +5616,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@astrojs/svelte": ^0.1.3
-    astro: ^1.0.0-beta.40
+    astro: ^1.0.0-beta.41
     cspell: ^5.18.4
     markdownlint-cli: ^0.31.0
     npm-run-all: ^4.1.5

@@ -21,8 +21,8 @@
 
 - ECMAScript
   - JavaScript の中の共通の動作を定義した仕様 (実行環境に依らない)
-  - Ecma International (<https://www.ecma-international.org/>) という団体によって運営されている TC39 という専門委員会によって策定されている
-  - <https://github.com/tc39/proposals> で ECMAScript の API の提案がされてたりする
+  - [Ecma International](https://www.ecma-international.org/) という団体によって運営されている TC39 という専門委員会によって策定されている
+  - [TC39](https://github.com/tc39/proposals) で ECMAScript の API の提案がされてたりする
   - ES2015 で大変革があった
 - JavaScript
   - ECMAScript に加えて実行環境に依る機能を合わせたもの
@@ -1321,6 +1321,7 @@ const obj3 = {
 }
 ```
 
+<!-- FIXME -->
 ### `{}` は `Object` のインスタンスオブジェクト
 
 - `Object` は JavaScript のビルトインオブジェクト
@@ -1825,7 +1826,7 @@ console.log(arr, arr.length); // => [] 0
 
   - 配列オブジェクトの内容そのものを変更する
   - 変更した配列そのものか、変更箇所を返り値として返す
-  - 破壊的なメソッドを非破壊にするプロポーザルが存在し、現在は Stage1 (<https://github.com/tc39/proposal-change-array-by-copy>)
+  - 破壊的なメソッドを非破壊にするプロポーザルが存在し、現在は Stage1 ([tc39/proposal-change-array-by-copy](https://github.com/tc39/proposal-change-array-by-copy))
 
     | メソッド             | 返り値                     |
     | -------------------- | -------------------------- |
@@ -4607,7 +4608,7 @@ import { foo } from './my-module.js';
 ### Living Standard となる ECMAScript
 
 - ECMAScript の仕様書のドラフトは [tc39/ecma262](https://github.com/tc39/ecma262) で管理されている
-- 最新の仕様書は <https://tc39.github.io/ecma262/> にある
+- 最新の仕様書は [tc39/ecma262](https://github.com/tc39/ecma262) にある
   - 更新ごとにバージョン番号をつけず、常に最新版公開する  (Living Standard)
   - ES2017 のようにその年をバージョン番号としてつけたものは、Living Standard のスナップショットのようなもの
 
@@ -4645,7 +4646,7 @@ import { foo } from './my-module.js';
 ### 仕様や策定プロセスを知る意味
 
 - 言語を学ぶため
-  - JavaScript の言語機能を参照する目的ならば <https://developer.mozilla.org/ja/> などが有用な場合もある
+  - JavaScript の言語機能を参照する目的ならば [MDN Web Docs](https://developer.mozilla.org/ja/) などが有用な場合もある
 - 言語が進化しているため
   - 日々更新されていく機能を知るため
 - 情報の正しい状態を調べるため
