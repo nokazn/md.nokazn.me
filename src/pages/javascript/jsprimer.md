@@ -1321,7 +1321,6 @@ const obj3 = {
 }
 ```
 
-<!-- FIXME -->
 ### `{}` は `Object` のインスタンスオブジェクト
 
 - `Object` は JavaScript のビルトインオブジェクト
