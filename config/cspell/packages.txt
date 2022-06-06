@@ -15,6 +15,7 @@ GOENV
 GOOROOT
 GOPATH
 GOROOT
+Katex
 ldflags
 libbz
 libcurl

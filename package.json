@@ -1,6 +1,6 @@
 {
-  "license": "MIT",
   "private": true,
+  "license": "MIT",
   "author": {
     "name": "nokazn",
     "url": "https://github.com/nokazn"
@@ -17,10 +17,13 @@
     "fix:format": "prettier \"./{,**/}*.{{j,t}s{x,},svelte}\" --write --ignore-unknown"
   },
   "dependencies": {
+    "katex": "^0.15.6",
     "svelte": "^3.48.0"
   },
   "devDependencies": {
     "@astrojs/svelte": "^0.1.3",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/katex": "^0.14.0",
     "astro": "^1.0.0-beta.41",
     "cspell": "^5.18.4",
     "markdownlint-cli": "^0.31.0",
