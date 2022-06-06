@@ -1,4 +1,5 @@
 astro
+astrojs
 buildpack
 choco
 colorschemes
@@ -14,6 +15,7 @@ GOENV
 GOOROOT
 GOPATH
 GOROOT
+Katex
 ldflags
 libbz
 libcurl
@@ -34,6 +36,7 @@ mozc
 Mozc
 mysqladmin
 mysqld
+nextjs
 nodenv
 NODENV
 nuxt
@@ -42,7 +45,6 @@ pacman
 Pacman
 pamac
 pgdg
-PGHOST
 pipenv
 Pipenv
 pkcs
@@ -52,9 +54,9 @@ PYENV
 sdkman
 vcxsrv
 vimrc
+vite
 vundle
 Vundle
-wslconfig
 wslpath
 Xfce
 xlaunch

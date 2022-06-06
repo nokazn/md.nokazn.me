@@ -2,5 +2,5 @@
   "default": true,
   "MD013": { "line_length": 400 },
   "MD024": false,
-  "MD033": { "allowed_elements": ["br"] }
+  "MD033": { "allowed_elements": ["br", "Katex"] }
 }

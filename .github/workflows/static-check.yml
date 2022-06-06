@@ -24,8 +24,7 @@ jobs:
           yarn --frozen-lockfile
       - name: Spell check
         run: |
-          yarn spell-check
-          yarn lint:md
+          yarn static-check
 
   pre-commit:
     runs-on: ubuntu-20.04

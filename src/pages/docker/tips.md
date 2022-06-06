@@ -2,7 +2,7 @@
 
 ## Multi Stage Build する
 
-```dockerfile
+```docker
 # Install dependencies
 FROM node:12.18.0-alpine as init-stage
 ENV HOST="0.0.0.0"

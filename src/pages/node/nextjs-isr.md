@@ -71,7 +71,7 @@ ISR するとコンテナごとにキャッシュができ、不整合が起き�
 ### serverless-next.js (Lambda@Edge + S3 + CloudFront)
 
 - Serverless Framework の
-- <https://github.com/serverless-nextjs/serverless-next.js> に色々書いてある
+- [serverless-nextjs/serverless-next.js](https://github.com/serverless-nextjs/serverless-next.js) に色々書いてある
 
 ![architecture](https://github.com/serverless-nextjs/serverless-next.js/raw/master/img/arch_no_grid.png)
 
@@ -107,7 +107,7 @@ $ NODE_ENV=development AWS_S3_BUCKET_REGION=ap-northeast-1 sls
 ```
 
 - Serverless Framework のダッシュボードからリポジトリと連携すれば、自動デプロイできるらしい
-  - 参考) <https://www.serverless.com/blog/announcement-cicd/>
+  - 参考) [Announcing Serverless CI/CD](https://www.serverless.com/blog/announcement-cicd/)
 
 ![Announcing Serverless CI/CD](https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2020-02-01-announcement-cicd/BranchDeploymentStatusEdit.png)
 (公式ブログより)
@@ -118,7 +118,7 @@ $ NODE_ENV=development AWS_S3_BUCKET_REGION=ap-northeast-1 sls
 
 ### Amplify
 
-- Web アプリ・モバイルアプリの a<https://aws.amazon.com/jp/amplify/>
+- Web アプリ・モバイルアプリをデプロイするための開発プラットフォーム ([AWS Amplify（アプリケーションの構築とデプロイ）| AWS](https://aws.amazon.com/jp/amplify/))
 - [Next.js v11 がサポート](https://aws.amazon.com/jp/about-aws/whats-new/2021/08/aws-amplify-hosting-support-next-js-version-11/)されている
 
 ## さいごに
