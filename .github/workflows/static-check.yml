@@ -12,22 +12,22 @@ on:
 
 jobs:
   static-check:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: '14'
           cache: yarn
       - name: Install dependencies
         run: |
-          yarn --frozen-lockfile
-      - name: Spell check
+          yarn --immutable
+      - name: Static check
         run: |
           yarn static-check
 
   pre-commit:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
