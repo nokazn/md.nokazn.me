@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # CI 内でパッケージをインストールする
 
 ## 概要

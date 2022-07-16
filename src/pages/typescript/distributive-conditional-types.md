@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Distributive Conditional Types
 
 Conditional Types では Distributive な性質がある。

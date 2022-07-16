@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Linux 小技集
 
 よく使うコマンドとか諸々。

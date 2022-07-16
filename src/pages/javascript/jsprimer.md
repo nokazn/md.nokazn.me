@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # 第一部: 基本文法
 
 ## 1.1 JavaScript とは

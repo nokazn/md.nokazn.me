@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Git のコミット履歴を変更する
 
 `~/.gitconfig` の設定漏れとかで、コミット履歴の author が適切に設定されず、GitHub 等でコミット履歴を見たときに author のアイコンが正しく表示されなかったりする場合の対処法。

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # WSL  上で  Nuxt.js  を開発する際に https でアクセスできるようにする
 
 ## mkcert のインストール

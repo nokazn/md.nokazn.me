@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # psql
 
 PostgreSQL に接続するためのCLIツール。

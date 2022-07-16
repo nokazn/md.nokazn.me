@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # WSL 上の tmux でクリップボードを有効にする
 
 ## X Server をインストールして `xsel` を使えるようにする

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Go を CentOS にインストールする
 
 ## 環境

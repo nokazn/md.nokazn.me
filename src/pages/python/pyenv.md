@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # pyenv で Python のバージョンを管理する
 
 システムに直接 Python をインストールするのではなく、pyenv 経由でインストールする。

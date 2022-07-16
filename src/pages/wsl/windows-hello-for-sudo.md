@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # WSL 上で sudo コマンドの認証を Windows Hello で行う
 
 ## インストール

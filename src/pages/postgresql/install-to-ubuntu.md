@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # PostgreSQL を Ubuntu 20.04 にインストールする
 
 ## インストール

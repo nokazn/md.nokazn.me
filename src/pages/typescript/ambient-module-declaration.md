@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # tsconfig.json の paths は特に書かなくていい
 
 ```ts

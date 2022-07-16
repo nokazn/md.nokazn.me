@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Terraformer で既存のリソースをコード化する
 
 ## Terraformer

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # ts-node で自前の型定義ファイルを認識させる
 
 ```ts

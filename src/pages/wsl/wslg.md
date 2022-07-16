@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # WSLg で日本語化
 
 ## フォントのインストール

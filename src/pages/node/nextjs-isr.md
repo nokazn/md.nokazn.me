@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Next.js の ISR を AWS で動かすなら
 
 ## 概要

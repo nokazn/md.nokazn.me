@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # 再起動してもセッションを維持する
 
 [tmux-plugins/tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect#configuration) を入れるとウィンドウやペインの状態を保存・復元することができる。

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # nodenv で Node.js のバージョンを管理する
 
 システムに直接 Node.js をインストールするのではなく、nodenv 経由でインストールする。

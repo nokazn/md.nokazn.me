@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Docker コンテナから WSL2 で動いているサーバーを参照したい話
 
 ## 何をしたいか
