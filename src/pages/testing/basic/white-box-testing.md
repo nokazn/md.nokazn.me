@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/index.astro
+layout: ../../../layouts/index.astro
 ---
 
 # 2. ホワイトボックステスト
