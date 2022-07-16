@@ -51,6 +51,7 @@ pkcs
 psql
 pyenv
 PYENV
+ress
 sdkman
 vcxsrv
 vimrc
