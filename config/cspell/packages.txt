@@ -16,6 +16,8 @@ GOOROOT
 GOPATH
 GOROOT
 Katex
+keybase
+Keybase
 ldflags
 libbz
 libcurl

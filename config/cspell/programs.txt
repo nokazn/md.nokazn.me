@@ -3,11 +3,15 @@ conninfo
 dotfiles
 ECONNREFUSED
 fontconfig
+gpgsign
+keyid
 makepkg
 netsh
 oldstate
 PGHOST
+pinentry
 PKGBUILD
+signingkey
 typeof
 unshift
 usermod
