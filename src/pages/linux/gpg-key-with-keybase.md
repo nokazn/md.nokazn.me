@@ -56,9 +56,17 @@ $ git config --global user.signingkey "$(gpg --list-secret-keys --keyid-format L
 $ git config --global commit.gpgsign true
 ```
 
+### 5. GitHub に GPG キーを登録する
+
+```bash
+# 公開鍵をコピー
+$ keybase pgp export -q <GPG キーの ID>
+```
+
+[設定画面](https://github.com/settings/gpg/new) から GPG キーを登録する。
+
 ## 参考
 
-- [Keybase の鍵で GitHub のコミットに Verified バッジをつける - Qiita](https://qiita.com/HelloRusk/items/bcb0246b42d12195c6d0)
 - [Keybase の鍵で GitHub のコミットに Verified バッジをつける - Qiita](https://qiita.com/HelloRusk/items/bcb0246b42d12195c6d0)
 - [Unable to login in Linux terminal · Issue #6333 · keybase/client](https://github.com/keybase/client/issues/6333)
 - [gpg-agent forwarding: inappropriate ioctl for device - Stack Overflow](https://stackoverflow.com/questions/51504367/gpg-agent-forwarding-inappropriate-ioctl-for-device)
