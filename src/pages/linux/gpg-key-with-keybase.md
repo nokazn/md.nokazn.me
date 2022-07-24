@@ -68,5 +68,6 @@ $ keybase pgp export -q <GPG キーの ID>
 ## 参考
 
 - [Keybase の鍵で GitHub のコミットに Verified バッジをつける - Qiita](https://qiita.com/HelloRusk/items/bcb0246b42d12195c6d0)
+- [[メモ]: keybaseとgit/githubでgpg keyを共有する - Qiita](https://qiita.com/joemphilips/items/7e4d2941448807c4d431)
 - [Unable to login in Linux terminal · Issue #6333 · keybase/client](https://github.com/keybase/client/issues/6333)
 - [gpg-agent forwarding: inappropriate ioctl for device - Stack Overflow](https://stackoverflow.com/questions/51504367/gpg-agent-forwarding-inappropriate-ioctl-for-device)
