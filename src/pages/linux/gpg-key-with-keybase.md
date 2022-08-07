@@ -21,7 +21,7 @@ $ keybase login
 
 ```bash
 # すでに鍵が存在する場合は --multi オプションを付与する
-$ keybase pgp gen  --multi
+$ keybase pgp gen --multi
 ```
 
 - Email は複数紐づけることができる
