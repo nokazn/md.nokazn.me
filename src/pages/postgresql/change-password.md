@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # パスワードを変更する
 
 ```bash

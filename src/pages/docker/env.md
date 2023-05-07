@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # docker-compose での環境変数の扱い
 
 ## Dockerfile で `ENV` を指定した場合

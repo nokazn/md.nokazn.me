@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Github に ssh 接続する
 
 ## SSH Key を生成する

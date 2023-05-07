@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # apt のソースリスト
 
 `apt install` や `apt update` を実行する際には

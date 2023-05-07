@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # MySQL 8.0 を Ubuntu 20.04 にインストールする
 
 ## インストール

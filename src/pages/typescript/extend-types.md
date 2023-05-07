@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # 型を拡張するとき
 
 ## npm に `@types/foo` が存在しないとき

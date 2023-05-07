@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Vim のプラグイン管理
 
 Vundle でプラグイン管理していく。

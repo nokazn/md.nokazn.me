@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # AUR からパッケージをインストールする
 
 ## 準備

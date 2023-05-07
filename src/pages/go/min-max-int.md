@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # int の最大値と最小値
 
 ```go

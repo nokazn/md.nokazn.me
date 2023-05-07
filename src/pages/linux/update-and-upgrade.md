@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Ubuntu と CentOS でのパッケージの update と upgrade
 
 ## Ubuntu などの Debian 系 (apt / apt-get)

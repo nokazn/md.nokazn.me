@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Flatpak を導入する
 
 ## 環境

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # WSL に割り当てられる IP アドレスを確認する
 
 ```bash

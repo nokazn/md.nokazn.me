@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # コマンド一覧
 
 ## `psql` のコマンド

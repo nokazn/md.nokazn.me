@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # goenv で Go のバージョンを管理する
 
 システムに直接 Go をインストールするのではなく、goenv 経由でインストールする。

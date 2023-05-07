@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Heroku にデプロイする際、依存ライブラリに devDependencies も含める
 
 ```sh

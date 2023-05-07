@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # Assume Role して Terraform のコマンドを実行させるための設定
 
 ## 概要

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # tty と pts
 
 ## tty

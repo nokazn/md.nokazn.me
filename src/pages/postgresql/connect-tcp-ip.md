@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # PostgreSQL に TCP/IP で接続する
 
 デフォルトでは UNIX ドメインソケットで接続する。

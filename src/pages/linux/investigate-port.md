@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # 特定のポート番号を使用しているプロセスを調べる
 
 ## `ss` / `netstat`

@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/index.astro
+---
+
 # tips
 
 ## Multi Stage Build する
